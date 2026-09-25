@@ -1,0 +1,2091 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f8d4e2">
+<script>
+/* ===== SAVED LANGUAGE: apply direction early to reduce Arabic/English flash on refresh ===== */
+(function(){
+  try{
+    if(localStorage.getItem("KStoreLanguage") === "en"){
+      document.documentElement.lang="en";
+      document.documentElement.dir="ltr";
+      document.documentElement.classList.add("isEnglish");
+    }
+  }catch(e){}
+})();
+</script>
+<title>K.Store 🎀 — October Drop V10</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;1,700&display=swap');
+:root{--bg:#fff8f4;--paper:#fffdfb;--pink:#f6cadb;--pink2:#ffe1ec;--berry:#9c2048;--red:#d83c61;--ink:#261d22;--muted:#735e68;--line:#ead8df;--shadow:0 25px 80px #8f31531c}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Cairo,Arial,sans-serif;overflow-x:hidden}button,a{font:inherit}a{text-decoration:none;color:inherit}button{cursor:pointer}img{max-width:100%}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.025;z-index:100;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='x'%3E%3CfeTurbulence baseFrequency='.8' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23x)'/%3E%3C/svg%3E")}
+.top{position:-webkit-sticky;position:sticky;top:0;z-index:20;background:#fff8f4d9;backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}.topin{max-width:1180px;margin:auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px}.logo{font-weight:900;font-size:20px}.logo i{color:var(--berry);font-style:normal}.nav{display:flex;gap:5px}.nav a{padding:9px 13px;border-radius:99px;font-size:14px;font-weight:900}.nav a:hover{background:var(--pink2)}.tag{font-size:13px;font-weight:900;background:#fff;border:1px solid var(--line);border-radius:99px;padding:7px 11px}
+.hero{min-height:88vh;display:grid;place-items:center;padding:55px 20px 75px;position:relative;overflow:hidden;background:radial-gradient(circle at 12% 25%,#f7c7d9 0 7%,transparent 28%),radial-gradient(circle at 90% 75%,#f2b4c9 0 5%,transparent 25%),var(--bg)}.hero:after{content:"♡";position:absolute;font-size:260px;color:#fff;right:-45px;top:5%;opacity:.55;transform:rotate(12deg)}
+.heroIn{width:min(1180px,100%);display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:35px;position:relative;z-index:1}.eyebrow{font-size:11px;letter-spacing:2px;font-weight:900;color:var(--berry)}h1{font-size:clamp(55px,8vw,105px);line-height:.88;letter-spacing:-5px;margin:15px 0 22px;font-weight:900}h1 em{font-family:"Playfair Display",serif;color:var(--berry);font-style:italic;letter-spacing:-2px}.lead{max-width:570px;line-height:1.95;font-size:16px}.lead b{color:var(--berry)}.actions{display:flex;gap:9px;flex-wrap:wrap;margin-top:24px}.btn{border:0;border-radius:999px;padding:13px 19px;font-weight:900;transition:.25s;display:inline-block}.btn:hover{transform:translateY(-3px)}.primary{background:var(--berry);color:#fff;box-shadow:0 14px 30px #9c20483b}.secondary{background:#fff;border:1px solid var(--line)}
+.heroVisual{height:530px;position:relative;display:grid;place-items:center}.blob{position:absolute;width:390px;height:390px;background:var(--pink);border-radius:53% 47% 45% 55%;transform:rotate(-8deg)}.heroCase{position:relative;width:300px;height:440px;object-fit:cover;border-radius:34px;transform:rotate(5deg);box-shadow:0 35px 80px #261d2230;transition:.7s}.heroVisual:hover .heroCase{transform:rotate(-2deg) translateY(-12px)}.float{position:absolute;background:#fff;padding:9px 13px;border-radius:15px;box-shadow:0 18px 45px #261d2218;font-size:11px;font-weight:900;z-index:2}.f1{top:75px;right:25px;transform:rotate(8deg)}.f2{bottom:75px;left:25px;color:var(--berry);transform:rotate(-8deg)}
+.marquee{background:var(--berry);color:#fff;overflow:hidden}.marq{display:flex;width:max-content;animation:run 19s linear infinite}.marq span{padding:12px 25px;font-size:12px;font-weight:900}@keyframes run{to{transform:translateX(50%)}}
+.wrap{max-width:1180px;margin:auto;padding:0 20px}.drop{margin:55px auto 0}.dropbox{background:#fff;border:1px solid var(--line);border-radius:32px;padding:27px;box-shadow:var(--shadow);display:flex;align-items:center;justify-content:space-between;gap:25px}.drop h2{margin:4px 0;font-size:clamp(28px,4vw,48px);line-height:1}.drop h2 span{color:var(--berry)}.drop p{font-size:13px;color:var(--muted);line-height:1.8;margin-bottom:0}.badge{background:var(--pink2);border-radius:23px;padding:20px;min-width:175px;text-align:center;font-size:11px;font-weight:900}.badge strong{display:block;color:var(--berry);font-size:25px}
+section.content{margin:120px auto}.head{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:32px}.head h2{font-size:clamp(40px,6vw,72px);line-height:.9;margin:7px 0;letter-spacing:-3px}.head p{max-width:430px;color:var(--muted);font-size:16px;line-height:1.95}.tiny{font-size:11px;letter-spacing:2px;font-weight:900;color:var(--berry)}
+.caseBox{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;background:#fff;border:1px solid var(--line);border-radius:40px;padding:28px;box-shadow:var(--shadow)}.casePhoto{min-height:650px;border-radius:30px;background:linear-gradient(135deg,#f8d6e2,#fff3f7);display:grid;place-items:center;position:relative}.casePhoto:after{content:"UV PRINT • SILICONE";position:absolute;left:25px;bottom:23px;color:var(--berry);font-size:10px;font-weight:900;letter-spacing:2px}.caseImg{width:min(390px,72%);height:580px;object-fit:cover;border-radius:34px;transform:rotate(3deg);box-shadow:0 35px 70px #261d2230;transition:.6s}.casePhoto:hover .caseImg{transform:rotate(-2deg) translateY(-9px)}.caseText{padding:10px}.caseText h3{font-size:44px;line-height:.95;margin:12px 0}.caseText p{color:var(--muted);line-height:1.9}.choices{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin:22px 0}.choice{background:#fff;border:1px solid var(--line);border-radius:18px;padding:14px;text-align:right}.choice.active,.choice:hover{border-color:var(--berry);background:#fff1f5}.choice small{display:block;font-size:10px;color:#806d75}.choice b{font-size:22px;color:var(--berry)}.notes{display:flex;gap:7px;flex-wrap:wrap;margin:15px 0 22px}.notes span{font-size:10px;font-weight:800;background:#fae8ef;border-radius:99px;padding:7px 10px}
+.catalog{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.card{background:#fff;border:1px solid var(--line);border-radius:30px;overflow:hidden;box-shadow:0 18px 55px #8f31530e;transition:.35s}.card:hover{transform:translateY(-7px);box-shadow:var(--shadow)}.cover{min-height:305px;background:#fceaf1;display:grid;place-items:center;padding:28px;position:relative}.art{width:75%;height:205px;background:#fff;border:1px solid var(--line);border-radius:25px;display:grid;place-items:center;text-align:center;color:var(--berry);font-size:24px;font-weight:900;box-shadow:0 20px 45px #261d2212;transform:rotate(-3deg)}.inside{padding:19px 21px 22px}.inside h3{font-size:27px;margin:0}.inside p{font-size:14px;color:var(--muted);line-height:1.9}.hint{font-size:13px;color:var(--berry);font-weight:900}.details{display:none;margin-top:14px}.card.open .details{display:block}.card.open .hint{display:none}.details ul{list-style:none;padding:0;margin:0;display:grid;gap:6px}.details li{display:flex;justify-content:space-between;border-bottom:1px dashed var(--line);padding:9px 0;font-size:14px}.details li b{color:var(--berry)}.selectRow{display:flex;gap:8px;margin-top:13px}.selectRow select{flex:1;border:1px solid var(--line);border-radius:13px;background:#fff;padding:10px;font-size:11px}.order{border:0;background:var(--berry);color:#fff;border-radius:13px;padding:10px 13px;font-weight:900}
+.stickerCover{min-height:305px;background:#fceaf1;padding:22px;display:flex;flex-direction:column;justify-content:center;gap:10px}.slider{overflow:hidden;border-radius:22px;background:#fff}.slides{display:flex;direction:ltr;transition:transform .45s ease}.slide{min-width:100%;padding:10px;direction:rtl}.placeholder{height:245px;border:1px dashed #d995ae;border-radius:18px;display:grid;place-items:center;text-align:center;color:var(--berry);font-weight:900;background:#fff9fb}.dots{text-align:center}.dot{border:0;width:9px;height:9px;border-radius:50%;background:#e5c0cd;margin:3px;padding:0}.dot.active{background:var(--berry)}
+.urgency{margin-top:120px;background:var(--berry);color:#fff;text-align:center;padding:80px 20px;position:relative;overflow:hidden}.urgency h2{font-size:clamp(45px,8vw,95px);line-height:.87;letter-spacing:-4px;margin:5px 0 20px}.urgency p{max-width:610px;margin:auto;font-size:14px;line-height:1.9}.footer{background:#21191d;color:#fff;padding:35px 20px;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;font-size:12px}.footer a{color:#ffd6e3}.reveal{opacity:0;transform:translateY(35px);transition:.8s}.reveal.show{opacity:1;transform:none}
+@media(max-width:800px){.nav{display:none}.hero{min-height:auto}.heroIn{grid-template-columns:1fr}.heroVisual{height:410px;order:-1}.heroCase{width:235px;height:350px}.blob{width:290px;height:290px}.dropbox{flex-direction:column;align-items:stretch}.badge{min-width:0}.head{display:block}.head p{margin-top:15px}.caseBox{grid-template-columns:1fr;padding:14px}.casePhoto{min-height:500px}.caseImg{width:260px;height:430px}.catalog{grid-template-columns:1fr}.cover{min-height:270px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+
+/* ===== V10 desktop readability + exit placement ===== */
+@media(min-width:801px){
+  .topin{padding:16px 24px}.logo{font-size:24px}.nav{gap:8px}.nav a{padding:10px 10px;font-size:17px}.tag{padding:9px 14px;font-size:13px}
+  .dropbox{padding:34px 36px}.drop h2{font-size:clamp(34px,4.2vw,54px)}.drop p{font-size:15px;max-width:760px}
+  .inside h3{font-size:31px}.inside p{font-size:14px}.hint{font-size:13px}.head p{font-size:16px}
+  .exitTriggerWrap{padding:70px 20px 35px}
+  .exitTrigger{font-size:20px!important;padding:18px 34px!important;min-width:280px}
+}
+@media(max-width:800px){
+  .inside p{font-size:10px}.hint{font-size:10px}.details li{font-size:10px}
+}
+
+/* ===== K.Store V7 personality layer ===== */
+:root{
+  --bg:#fff7f2;--pink:#f7b8cf;--pink2:#ffe0ec;--berry:#a5144b;
+  --cherry:#7d123c;--red:#e53963;--ink:#241a20;--muted:#735e68;
+  --line:#ead2dc;--shadow:0 25px 80px #8f31532b
+}
+body{background:
+  radial-gradient(circle at 4% 18%,#ffd9e8 0 3%,transparent 14%),
+  radial-gradient(circle at 96% 48%,#ffd0df 0 3%,transparent 14%),
+  var(--bg)}
+.hero{background:
+  radial-gradient(circle at 12% 25%,#f7b8cf 0 8%,transparent 29%),
+  radial-gradient(circle at 88% 72%,#ffc9da 0 6%,transparent 27%),
+  var(--bg)}
+.card,.caseBox,.dropbox{position:relative}
+.card:before{content:"";position:absolute;z-index:3;top:12px;right:15px;width:22px;height:7px;background:#f6c0d3;border-radius:4px;transform:rotate(7deg);opacity:.75}
+.cover{background:
+  linear-gradient(135deg,#ffe9f1,#fff8f5 52%,#fbd4e2)}
+.card.open{border-color:#c32b61;box-shadow:0 24px 75px #9c20482a;transform:translateY(-8px)}
+.card.open .cover{min-height:320px}
+.card.open .details{animation:detailsIn .45s ease both}
+@keyframes detailsIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.float{animation:floaty 3.8s ease-in-out infinite}
+.f2{animation-delay:-1.7s}
+@keyframes floaty{50%{transform:translateY(-9px) rotate(-5deg)}}
+.heroCase{animation:caseFloat 5s ease-in-out infinite}
+@keyframes caseFloat{50%{transform:rotate(-1deg) translateY(-14px)}}
+
+/* playful sticker bits */
+.bow{position:absolute;pointer-events:none;z-index:4;font-size:25px;filter:drop-shadow(0 7px 10px #9c20482a);animation:bob 4s ease-in-out infinite}
+.bow.b1{top:11%;left:7%;transform:rotate(-18deg)}
+.bow.b2{top:58%;right:5%;transform:rotate(14deg);animation-delay:-2s}
+@keyframes bob{50%{translate:0 -10px;rotate:4deg}}
+
+/* Exit meme */
+.exitShade{position:fixed;inset:0;z-index:9998;display:none;align-items:center;justify-content:center;
+  padding:18px;background:#4b102d73;backdrop-filter:blur(10px)}
+.exitShade.show{display:flex;animation:shadeIn .25s ease}
+@keyframes shadeIn{from{opacity:0}to{opacity:1}}
+.exitCard{width:min(570px,100%);position:relative;overflow:hidden;text-align:center;
+  background:#fff8f5;border:2px solid #fff;border-radius:38px;padding:30px 24px 25px;
+  box-shadow:0 35px 100px #2b0d1d55;transform:rotate(-1deg);
+  animation:exitPop .55s cubic-bezier(.2,1.4,.3,1)}
+@keyframes exitPop{from{opacity:0;transform:scale(.82) rotate(4deg)}to{opacity:1;transform:scale(1) rotate(-1deg)}}
+.exitCard:before,.exitCard:after{content:"🎀";position:absolute;font-size:36px;opacity:.8}
+.exitCard:before{left:17px;top:12px;transform:rotate(-16deg)}
+.exitCard:after{right:15px;bottom:12px;transform:rotate(13deg)}
+.exitEyebrow{font-size:11px;font-weight:900;letter-spacing:2px;color:var(--berry)}
+.exitTitle{font-size:clamp(35px,8vw,60px);font-weight:900;line-height:.95;letter-spacing:-3px;margin:12px 0 10px}
+.exitTitle em{font-family:"Playfair Display",serif;color:var(--berry);font-style:italic}
+.exitText{font-size:14px;line-height:1.9;color:var(--muted);max-width:460px;margin:0 auto 18px}
+.exitPrice{display:inline-block;background:#ffe0ec;color:var(--berry);padding:8px 13px;border-radius:99px;font-size:12px;font-weight:900;margin-bottom:20px}
+.exitActions{display:flex;justify-content:center;gap:10px;flex-wrap:wrap}
+.exitBtn{border:0;border-radius:999px;padding:13px 18px;font-weight:900;min-width:180px}
+.stayBtn{background:var(--berry);color:#fff;box-shadow:0 13px 28px #a5144b33}
+.leaveBtn{background:#fff;border:1px solid var(--line);color:var(--ink);position:relative}
+.leaveBtn.dodging{animation:dodge .28s cubic-bezier(.2,.9,.4,1)}
+@keyframes dodge{25%{transform:translateX(-28px) rotate(-4deg)}60%{transform:translateX(34px) rotate(4deg)}100%{transform:translateX(0)}}
+.exitMeme{min-height:25px;margin:13px 0 0;color:var(--berry);font-size:13px;font-weight:900}
+.exitTiny{font-size:10px;color:#9a7b88;margin-top:10px}
+
+/* close button */
+.exitClose{position:absolute;top:12px;left:14px;border:0;background:#fff0f5;color:var(--berry);
+  width:34px;height:34px;border-radius:50%;font-weight:900;font-size:18px;z-index:2}
+@media(max-width:600px){
+  .exitCard{padding:28px 17px 22px;border-radius:30px}
+  .exitTitle{font-size:42px}
+  .exitBtn{width:100%;min-width:0}
+}
+
+
+/* ===== V7: desktop personality + responsive balance ===== */
+:root{
+ --bg:#fff4ef; --paper:#fffaf7; --pink:#f5a9c5; --pink2:#ffd3e2;
+ --berry:#9d174d; --cherry:#64102f; --red:#e33f67; --ink:#24151c;
+ --muted:#725a66; --line:#e7c9d4; --cream:#fff8f1;
+}
+body{
+ background:
+ radial-gradient(circle at 7% 13%,#f7b0c9 0 5%,transparent 18%),
+ radial-gradient(circle at 94% 36%,#ffc7da 0 4%,transparent 18%),
+ linear-gradient(180deg,#fff4ef 0%,#fffaf7 48%,#fff0f4 100%);
+}
+.top{background:#fff7f1eb;border-bottom:2px solid #e8c9d4}
+.topin{max-width:1320px;padding:16px 28px}
+.logo{font-size:28px;letter-spacing:-1px}
+.nav{gap:8px}
+.nav a{padding:10px 16px;font-size:14px}
+.tag{font-size:12px;padding:9px 14px;background:#fff0f5;border-color:#e2bdcb;color:var(--berry)}
+
+.hero{
+ min-height:94vh;padding:72px 30px 92px;
+ background:
+ radial-gradient(circle at 16% 30%,#f7abc5 0 8%,transparent 30%),
+ radial-gradient(circle at 82% 70%,#f8c7d9 0 7%,transparent 30%),
+ linear-gradient(135deg,#fff2ec,#fff9f5 55%,#ffeaf1);
+}
+.heroIn{max-width:1320px;grid-template-columns:1.08fr .92fr;gap:65px}
+.eyebrow{font-size:13px;letter-spacing:3px}
+h1{font-size:clamp(72px,8.8vw,132px);letter-spacing:-7px;margin:20px 0 28px}
+.lead{font-size:18px;max-width:650px;line-height:2}
+.actions{margin-top:30px;gap:12px}
+.btn{padding:15px 23px;font-size:14px}
+.heroVisual{height:620px}
+.blob{width:500px;height:500px;background:linear-gradient(145deg,#f49fbe,#ffd6e4)}
+.heroCase{width:350px;height:510px;border-radius:42px}
+.float{font-size:13px;padding:11px 16px;border-radius:17px}
+.f1{top:82px;right:10px}.f2{bottom:85px;left:12px}
+
+.marquee{background:linear-gradient(90deg,var(--cherry),var(--berry),var(--cherry))}
+.marq span{padding:15px 35px;font-size:14px}
+
+.wrap{max-width:1320px;padding:0 28px}
+.drop{margin-top:70px}
+.dropbox{padding:34px 38px;border-radius:38px;border:2px solid #e8cbd5}
+.drop h2{font-size:clamp(38px,4.3vw,62px)}
+.drop p{font-size:14px}
+.badge{min-width:210px;padding:23px;font-size:12px}
+.badge strong{font-size:31px}
+
+section.content{margin:150px auto}
+.head{margin-bottom:42px}
+.head h2{font-size:clamp(52px,6vw,88px)}
+.head p{font-size:14px;max-width:500px}
+
+.caseBox{border-radius:42px;gap:55px;padding:24px;background:linear-gradient(135deg,#fff,#fff3f7)}
+.casePhoto{min-height:650px;border-radius:30px;background:#ffe1eb}
+.caseImg{width:360px;height:570px}
+.caseText h3{font-size:clamp(48px,5vw,76px);line-height:.9}
+.caseText p{font-size:15px;line-height:2}
+
+.catalog{gap:22px}
+.card{border-radius:30px;border:2px solid #ead0d9;background:#fffaf7;box-shadow:0 20px 55px #8f315318}
+.card .cover{min-height:340px}
+.card .inside{padding:25px}
+.card h3{font-size:28px}
+.card p{font-size:14px;line-height:1.9}
+.hint{font-size:12px}
+.card.open{box-shadow:0 30px 80px #8f315333}
+
+.bow{font-size:31px}
+.bow.b1{left:3%;top:12%}.bow.b2{right:3%;top:57%}
+
+/* creative editorial labels */
+.hero:before{
+ content:"OCTOBER\A DROP";
+ white-space:pre;position:absolute;left:2.5%;bottom:7%;
+ font-size:clamp(11px,1.1vw,17px);line-height:1.05;font-weight:900;
+ letter-spacing:4px;color:var(--berry);opacity:.72;transform:rotate(-8deg);
+}
+.dropbox:after{
+ content:"✦ ✦ ✦";position:absolute;right:26px;top:-15px;
+ background:var(--berry);color:#fff;border-radius:99px;padding:7px 13px;
+ font-size:11px;letter-spacing:5px;transform:rotate(4deg)
+}
+
+/* mobile: keep the cute look, but make it intentionally compact */
+@media(max-width:900px){
+ .topin{padding:12px 15px}.logo{font-size:22px}.tag{font-size:10px;padding:7px 10px}
+ .hero{min-height:auto;padding:44px 16px 60px}
+ .heroIn{gap:8px}.heroIn>div:first-child{order:2}.heroVisual{order:1;height:390px}
+ h1{font-size:clamp(57px,17vw,86px);letter-spacing:-4px;margin:12px 0 18px}
+ .lead{font-size:14px;line-height:1.9}
+ .heroCase{width:235px;height:350px}.blob{width:300px;height:300px}
+ .hero:before{left:12px;bottom:15px;font-size:10px}
+ .drop{margin-top:35px}.dropbox{padding:23px 18px;border-radius:27px}
+ .dropbox:after{right:16px;top:-13px}.badge{width:100%}
+ section.content{margin:82px auto}.wrap{padding:0 15px}
+ .head h2{font-size:clamp(44px,13vw,68px)}
+ .caseBox{gap:18px;padding:13px;border-radius:28px}
+ .casePhoto{min-height:450px}.caseImg{width:260px;height:420px}
+ .caseText h3{font-size:48px}.caseText p{font-size:13px}
+ .card .cover{min-height:285px}.card .inside{padding:20px}
+ .card h3{font-size:25px}
+ .nav{display:none}
+}
+@media(min-width:901px){
+ .catalog{grid-template-columns:repeat(3,1fr)}
+}
+
+
+.heroSticker{position:absolute;z-index:3;background:#fff;border:2px solid #e7c9d4;border-radius:50%;width:90px;height:90px;display:grid;place-items:center;text-align:center;font-weight:900;font-size:18px;color:var(--berry);line-height:1;box-shadow:0 18px 45px #64102f20;transform:rotate(-10deg);animation:stickerFloat 4s ease-in-out infinite}
+.heroSticker small{font-size:8px;letter-spacing:1px}
+.heroSticker.s1{top:42px;left:22px}.heroSticker.s2{right:12px;bottom:45px;transform:rotate(12deg);animation-delay:-2s}
+@keyframes stickerFloat{50%{translate:0 -11px;rotate:4deg}}
+@media(max-width:900px){.heroSticker{width:70px;height:70px;font-size:14px}.heroSticker.s1{top:25px;left:5px}.heroSticker.s2{right:0;bottom:25px}}
+
+
+/* V8 exit trigger */
+.exitTriggerWrap{max-width:1320px;margin:0 auto;padding:0 28px 90px;text-align:center}
+.exitTrigger{border:0;border-radius:999px;background:var(--cherry);color:#fff;padding:20px 42px;font-size:22px;font-weight:900;cursor:pointer;box-shadow:0 20px 45px #64102f2b;transition:.25s}
+.exitTrigger:hover{transform:translateY(-4px) rotate(-1deg);box-shadow:0 26px 55px #64102f35}
+
+/* ===== V8: PHONE IS ITS OWN DESIGN ===== */
+@media(max-width:700px){
+  html{overflow-x:hidden}
+  body{overflow-x:hidden}
+  .bow{display:none}
+  .top{position:relative}
+  .topin{padding:13px 14px;gap:8px}
+  .logo{font-size:21px}
+  .tag{font-size:9px;padding:7px 9px;white-space:nowrap}
+
+  .hero{min-height:auto;padding:30px 14px 48px;background:linear-gradient(180deg,#fff0f4 0%,#fff8f3 100%)}
+  .heroIn{display:flex;flex-direction:column;gap:0;width:100%}
+  .heroIn>div:first-child{order:2;width:100%;text-align:center}
+  .heroVisual{order:1;width:100%;height:330px;margin-bottom:4px}
+  .blob{width:245px;height:245px}
+  .heroCase{width:205px;height:305px;border-radius:28px}
+  .float{font-size:9px;padding:8px 10px;border-radius:13px}
+  .f1{top:38px;right:2px}.f2{bottom:36px;left:2px}
+  .heroSticker{width:58px;height:58px;font-size:11px;border-width:1px}
+  .heroSticker small{font-size:6px}
+  .heroSticker.s1{top:20px;left:0}.heroSticker.s2{right:0;bottom:12px}
+  .eyebrow{font-size:9px;letter-spacing:2px}
+  h1{font-size:58px;letter-spacing:-4px;line-height:.9;margin:9px 0 15px}
+  .lead{font-size:13px;line-height:1.85;margin:0 auto;max-width:360px}
+  .actions{justify-content:center;gap:8px;margin-top:20px}
+  .btn{font-size:15px;padding:12px 16px}
+  .hero:before{font-size:8px;left:5px;bottom:8px;letter-spacing:2px}
+
+  .marquee{overflow:hidden}.marq span{padding:12px 20px;font-size:10px}
+  .wrap{padding:0 12px;width:100%;box-sizing:border-box}
+  .drop{margin-top:28px}
+  .dropbox{display:flex;flex-direction:column;gap:17px;padding:20px 16px;border-radius:24px}
+  .dropbox:after{right:12px;top:-11px;font-size:8px;padding:6px 9px}
+  .drop h2{font-size:39px;line-height:1}
+  .drop p{font-size:12px;line-height:1.8}
+  .badge{min-width:0;width:100%;box-sizing:border-box;padding:17px;font-size:10px}
+  .badge strong{font-size:25px}
+
+  section.content{margin:68px auto}
+  .head{display:block;margin-bottom:22px;text-align:center}
+  .head h2{font-size:48px;line-height:.95;margin:7px 0 13px}
+  .head p{font-size:12px;line-height:1.85;margin:0 auto}
+
+  .caseBox{display:flex;flex-direction:column;gap:18px;padding:10px;border-radius:24px;overflow:hidden}
+  .casePhoto{min-height:390px;height:390px;border-radius:20px;display:grid;place-items:center}
+  .caseImg{width:220px;height:345px;object-fit:cover}
+  .caseText{padding:4px 8px 10px;text-align:center}
+  .caseText h3{font-size:45px;line-height:.9;margin:12px 0}
+  .caseText p{font-size:12px;line-height:1.85}
+  .choices{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:14px 0}
+  .choice{min-height:72px;padding:10px 6px}
+  .choice b{font-size:18px}.choice small{font-size:8px}
+  .notes{display:flex;flex-direction:column;gap:7px;align-items:center;margin:12px 0 15px}
+  .notes span{font-size:9px;padding:6px 9px}
+
+  .catalog{display:grid;grid-template-columns:1fr;gap:15px}
+  .card{border-radius:24px;overflow:hidden;box-shadow:0 14px 35px #8f315312}
+  .card .cover,.stickerCover{min-height:235px;height:235px}
+  .card .inside{padding:17px}
+  .card h3{font-size:25px;margin:0 0 7px}
+  .card p{font-size:12px;line-height:1.8}
+  .hint{font-size:10px}
+  .details{margin-top:13px}
+  .details li{font-size:11px;padding:9px 0}
+  .selectRow{display:grid;grid-template-columns:1fr 74px;gap:7px}
+  .selectRow select{min-width:0;font-size:10px}
+  .order{font-size:10px;padding:10px 8px}
+  .slides{height:235px}
+  .slide{min-width:100%;height:235px}
+  .placeholder{font-size:17px}
+
+  .urgency{margin-top:72px;padding:60px 18px;text-align:center}
+  .urgency h2{font-size:48px;line-height:.95}
+  .urgency p{font-size:12px;line-height:1.85}
+  .footer{display:flex;flex-direction:column;gap:14px;padding:30px 16px;text-align:center}
+
+  /* mobile-only exit trigger */
+  .exitTriggerWrap{padding:0 12px 70px;text-align:center}
+  .exitTrigger{width:100%;border:0;border-radius:22px;background:#64102f;color:#fff;padding:18px 14px;font-size:20px;font-weight:900;box-shadow:0 16px 35px #64102f33}
+  .exitTrigger:active{transform:scale(.98)}
+
+  .exitShade{padding:12px}
+  .exitCard{width:100%;box-sizing:border-box;padding:30px 15px 20px;border-radius:26px}
+  .exitTitle{font-size:39px;letter-spacing:-2px}
+  .exitText{font-size:12px;line-height:1.8}
+  .exitPrice{font-size:11px;margin-bottom:14px}
+  .exitActions{display:grid;grid-template-columns:1fr;gap:8px}
+  .exitBtn{width:100%;min-width:0;padding:13px 10px;font-size:12px}
+  .exitTiny{font-size:9px}
+}
+
+
+/* ===== V9: client-facing final polish ===== */
+.marq{display:flex;width:max-content;animation:marqueeLoop 24s linear infinite;will-change:transform}
+.marqGroup{display:flex;flex:none}
+.marq span{white-space:nowrap}
+@keyframes marqueeLoop{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.inlineScript{font-family:"Playfair Display",serif;color:var(--berry);font-style:italic;white-space:nowrap}
+.dropbox{position:relative;min-height:190px}
+.dropbox>div:first-child{flex:1}
+.dropbox .badge{flex:0 0 240px}
+.dropbox:before{content:"✦";position:absolute;left:30px;bottom:18px;font-size:58px;color:#f3b2ca;opacity:.45;transform:rotate(-12deg)}
+.heroSticker.s1{right:auto;left:12px}
+.exitTriggerWrap{padding-top:15px}
+.exitTrigger{min-width:min(620px,100%);font-size:26px;padding:24px 50px;border-radius:28px}
+.exitTrigger:after{content:"  ← لو خلصتي لسه، دوسي هنا";font-size:12px;opacity:.72}.isEnglish .exitTrigger:after{content:"  ← Done? Click here"}
+.exitText{font-size:18px;line-height:2.05;max-width:540px}
+.exitMeme{font-size:17px;min-height:34px}
+.exitTiny{font-size:12px}
+.exitBtn{font-size:15px;padding:15px 20px}
+.productAudioHint{display:inline-flex;align-items:center;gap:6px;margin-top:8px;font-size:10px;color:var(--berry);font-weight:900;background:#fff0f5;border-radius:99px;padding:6px 9px}
+@media(min-width:901px){
+ .heroIn{grid-template-columns:1.2fr .8fr;gap:30px}
+ .heroVisual{height:560px}
+ .hero{padding-top:55px;padding-bottom:65px}
+ .drop{margin-top:55px}
+ .dropbox{padding:38px 45px;min-height:230px}
+ .drop h2{font-size:clamp(44px,4.8vw,70px)}
+ .drop p{font-size:16px;max-width:720px;line-height:2}
+ .badge{min-width:240px;font-size:13px}.badge strong{font-size:36px}
+ section.content{margin:105px auto}
+ .head{margin-bottom:32px}
+ .head h2{font-size:clamp(56px,6vw,82px)}
+ .head p{font-size:16px;line-height:2}
+ .caseText p{font-size:16px}
+ .card h3{font-size:31px}.card p{font-size:15px}
+ .urgency{margin-top:80px}
+}
+@media(max-width:700px){
+ .marq{animation-duration:18s}.marq span{padding:12px 18px}
+ .dropbox{min-height:0}.dropbox:before{font-size:35px;left:12px;bottom:8px}
+ .heroSticker.s1{left:2px}
+ .head h2{text-align:center}
+ .head p{font-size:13px}
+ .exitTriggerWrap{padding-top:10px;padding-bottom:52px}
+ .exitTrigger{width:100%;min-width:0;font-size:20px;padding:18px 12px;border-radius:22px}
+ .exitTrigger:after{display:block;font-size:9px;margin-top:4px}
+ .exitText{font-size:15px;line-height:1.95}
+ .exitMeme{font-size:18px}.exitTiny{font-size:13px}.exitBtn{font-size:15px}
+}
+
+
+/* ===== FINAL CASE IMAGE FIX =====
+   The source PNG has transparent padding. Keep it transparent and never crop/fill it.
+*/
+.heroCase{
+  object-fit:contain !important;
+  background:transparent !important;
+  border-radius:0 !important;
+}
+.caseImg{
+  object-fit:contain !important;
+  background:transparent !important;
+  border-radius:0 !important;
+}
+
+
+/* ===== V6 READABILITY ===== */
+body { font-size: 18px !important; }
+p, li, label, small, .muted, .sub, .desc, .description, .product-desc,
+.card p, .product p, .price, .btn, button, input, select, textarea {
+  font-size: 18px !important;
+  line-height: 1.6 !important;
+}
+h1 { font-size: clamp(38px, 5vw, 64px) !important; }
+h2 { font-size: clamp(30px, 4vw, 46px) !important; }
+h3 { font-size: clamp(24px, 3vw, 34px) !important; }
+.price { font-size: 24px !important; font-weight: 900 !important; }
+.btn, button { font-weight: 800 !important; }
+
+
+/* ===== V7 READABILITY ===== */
+.langToggle{
+  border:0;
+  background:var(--berry);
+  color:#fff;
+  border-radius:14px;
+  min-width:72px;
+  height:42px;
+  padding:0 14px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:7px;
+  font-size:14px;
+  font-weight:900;
+  letter-spacing:.6px;
+  cursor:pointer;
+  box-shadow:0 8px 20px #9c20483b;
+  transition:transform .2s ease,box-shadow .2s ease,background .2s ease;
+  order:2;
+}
+.langToggle:hover{transform:translateY(-2px) scale(1.03);box-shadow:0 12px 25px #9c20484d}
+.langToggle:active{transform:scale(.97)}
+.langIcon{font-size:17px;line-height:1}
+.topin .logo{order:1}
+.topin .nav{order:3}
+.topin .tag{order:4}
+.caseText p{
+  font-size:21px !important;
+  line-height:1.95 !important;
+  color:var(--ink) !important;
+}
+.caseText h3{font-size:48px !important;line-height:1 !important}
+.choice{padding:17px !important}
+.choice small{font-size:16px !important;font-weight:900 !important}
+.choice b{font-size:27px !important}
+.notes span{font-size:14px !important;padding:9px 12px !important}
+.inside p{font-size:18px !important;line-height:1.85 !important}
+.hint{font-size:16px !important}
+.details li{font-size:17px !important;padding:11px 0 !important}
+.selectRow select,.order{font-size:16px !important}
+.head p{font-size:19px !important}
+.tiny{font-size:13px !important}
+.drop p{font-size:18px !important}
+.badge{font-size:14px !important}
+.footer{font-size:15px !important}
+.exitTiny{font-size:15px !important}
+.exitTrigger{font-size:18px !important}
+@media(max-width:800px){
+  .topin{position:relative}
+  .langToggle{margin-inline-start:auto}
+  .caseText p{font-size:19px !important}
+  .inside p{font-size:17px !important}
+  .head p{font-size:17px !important}
+}
+
+
+/* ===== V9: ORIGINAL FONT + GENTLE SPACING ===== */
+
+/* Keep the site's original font exactly as designed. */
+body{
+  letter-spacing: normal !important;
+}
+
+/* Arabic: only give the lines some breathing room. */
+html[dir="rtl"] p,
+html[dir="rtl"] li,
+html[dir="rtl"] .caseText,
+html[dir="rtl"] .inside,
+html[dir="rtl"] .details,
+html[dir="rtl"] .notes{
+  line-height: 1.8 !important;
+  letter-spacing: normal !important;
+  word-spacing: normal !important;
+}
+
+/* Bring headings back to the clearly visible V7 scale. */
+h1{
+  font-size: clamp(38px, 5vw, 64px) !important;
+  line-height: 1.18 !important;
+}
+h2{
+  font-size: clamp(30px, 4vw, 46px) !important;
+  line-height: 1.25 !important;
+}
+h3{
+  font-size: clamp(24px, 3vw, 34px) !important;
+  line-height: 1.35 !important;
+}
+
+.caseText h3{
+  font-size: 42px !important;
+  line-height: 1.25 !important;
+  margin-bottom: 16px !important;
+}
+.caseText p{
+  font-size: 19px !important;
+  line-height: 1.85 !important;
+  margin-bottom: 16px !important;
+}
+
+/* Product text remains readable but not oversized. */
+.inside p,
+.details li{
+  font-size: 17px !important;
+  line-height: 1.8 !important;
+}
+.notes span{
+  font-size: 13px !important;
+  line-height: 1.4 !important;
+}
+
+/* Do NOT force a new English font; use the site's original font. */
+html[dir="ltr"] body,
+html[dir="ltr"] p,
+html[dir="ltr"] li,
+html[dir="ltr"] button,
+html[dir="ltr"] input,
+html[dir="ltr"] select,
+html[dir="ltr"] textarea,
+html[dir="ltr"] h1,
+html[dir="ltr"] h2,
+html[dir="ltr"] h3{
+  font-family: inherit !important;
+  letter-spacing: normal !important;
+}
+
+@media(max-width:800px){
+  .caseText h3{
+    font-size: 32px !important;
+  }
+  .caseText p{
+    font-size: 17px !important;
+    line-height: 1.8 !important;
+  }
+}
+
+
+/* ===== V11 HERO STICKER FIX ===== */
+.heroVisual{position:relative}
+.heroSticker.s1{
+  top:72px !important;
+  left:42px !important;
+  right:auto !important;
+  z-index:4 !important;
+}
+@media(max-width:900px){
+  .heroSticker.s1{top:28px !important;left:12px !important}
+}
+
+\n/* ===== V14: larger, clearer English + redesigned language toggle ===== */\nbody{font-size:18px}\n.lead{font-size:20px !important;line-height:2.05 !important;max-width:700px}\n.drop p,.head p,.caseText p,.inside p{font-size:17px !important;line-height:1.95 !important}\n.card p,.product p{font-size:17px !important;line-height:1.9 !important}\n.marq span{font-size:15px !important}\n@media(max-width:900px){\n  .lead{font-size:17px !important}\n  .drop p,.head p,.caseText p,.inside p,.card p,.product p{font-size:15px !important}\n}\n
+
+/* ===== CART / CHECKOUT — soft header cart + clean modal ===== */
+.cartBar{position:static;z-index:80;border:1px solid #e7c5d2;background:#fff8fb;color:var(--berry);border-radius:999px;padding:8px 13px;font:inherit;font-weight:900;box-shadow:0 5px 18px #64102f12;cursor:pointer;display:flex;align-items:center;gap:7px;transition:transform .2s,box-shadow .2s,background .2s;white-space:nowrap}
+.cartBar:hover{transform:translateY(-1px);box-shadow:0 8px 22px #64102f1c;background:#fff}
+.cartBar span{background:var(--berry);color:#fff;min-width:21px;height:21px;display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:0 5px;font-size:11px;margin:0;box-sizing:border-box}
+.cartBar b{font-size:13px}
+.cartShade{position:fixed;inset:0;background:#261d2252;backdrop-filter:blur(6px);z-index:90;display:none;align-items:center;justify-content:center;padding:18px}
+.cartShade.show{display:flex}
+.cartCard{width:min(560px,100%);max-height:84vh;overflow:auto;background:#fffdfd;border:1px solid #ead6df;border-radius:28px;padding:22px;box-shadow:0 28px 90px #261d2230;direction:rtl;animation:cartPop .2s ease-out}
+@keyframes cartPop{from{opacity:0;transform:translateY(12px) scale(.985)}to{opacity:1;transform:none}}
+.cartHead{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-bottom:16px;padding-bottom:13px;border-bottom:1px solid #f0e1e7}
+.cartHead h3{margin:0;font-size:23px;color:var(--berry);display:flex;align-items:center;gap:8px}
+.cartHead h3:before{content:"🎀";font-size:22px}
+.cartClose{border:0;background:#fff1f5;color:var(--berry);width:36px;height:36px;border-radius:50%;font-size:21px;cursor:pointer}
+.cartItem{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 14px;margin-bottom:9px;background:#fff;border:1px solid #ecdde3;border-radius:16px}
+.cartItem b{font-size:15px;color:var(--ink)}
+.cartItem small{display:block;color:var(--muted);margin-top:4px;font-size:12px}
+.cartRemove{border:1px solid #ead2dc;background:#fff7fa;color:var(--berry);border-radius:10px;padding:7px 11px;cursor:pointer;font:inherit;font-weight:800}
+.cartEmpty{text-align:center;padding:32px 15px;color:var(--muted)}
+.cartForm{margin-top:15px;padding:16px;background:#fff;border:1px solid #eadde3;border-radius:19px}
+.cartForm h4{margin:0 0 12px;color:var(--berry);font-size:18px}
+.cartGrid{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.cartField{width:100%;box-sizing:border-box;border:1px solid #dfccd5;border-radius:12px;padding:11px 12px;font:inherit;background:#fff;color:var(--ink);outline:none}
+.cartField:focus{border-color:#c75a82;box-shadow:0 0 0 3px #f7dce7}
+.cartField.full{grid-column:1/-1}
+.depositNote{margin:14px 0 0;padding:11px 13px;background:#fff4f7;border:1px solid #efd8e1;border-radius:13px;font-weight:800;color:var(--berry);line-height:1.7;font-size:13px}
+.cartTotal{display:flex;justify-content:space-between;margin:15px 2px;font-weight:900;font-size:18px;color:var(--ink)}
+.cartSend{width:100%;border:0;cursor:pointer;border-radius:14px!important;margin-top:12px}
+@media(max-width:900px){.topin{display:flex;align-items:center}.cartBar{order:2}.logo{order:1}.nav{order:3}.langToggle{order:4}.tag{order:5}}
+@media(max-width:600px){
+ .cartBar{padding:7px 10px;border-radius:999px;gap:5px}
+ .cartBar b{font-size:12px}
+ .cartBar span{min-width:19px;height:19px;font-size:10px}
+ .cartShade{padding:9px}
+ .cartCard{border-radius:22px;padding:16px;max-height:88vh}
+ .cartHead h3{font-size:20px}
+ .cartGrid{grid-template-columns:1fr}
+ .cartField.full{grid-column:auto}
+}
+
+/* ===== CART REDESIGN — polished, playful, less boxy ===== */
+.cartBar{
+  border:1.5px solid #d9a2b8 !important;
+  background:linear-gradient(135deg,#fff,#fff1f6) !important;
+  color:#7d123c !important;
+  border-radius:16px !important;
+  padding:9px 13px !important;
+  min-height:44px;
+  box-shadow:0 7px 20px #7d123c18, inset 0 1px 0 #fff !important;
+  gap:8px !important;
+}
+.cartBar:hover{transform:translateY(-2px) !important;box-shadow:0 12px 26px #7d123c22, inset 0 1px 0 #fff !important;background:#fff !important}
+.cartBar span{
+  background:#7d123c !important;
+  min-width:24px !important;height:24px !important;
+  font-size:12px !important;
+  box-shadow:0 3px 8px #7d123c30;
+}
+.cartBar b{font-size:14px !important;letter-spacing:.1px}
+.cartBar .cartIcon{font-size:17px;line-height:1}
+
+.cartShade{background:#24151c66 !important;backdrop-filter:blur(12px) saturate(1.08) !important;padding:18px !important}
+.cartCard{
+  width:min(680px,100%) !important;
+  max-height:88vh !important;
+  overflow:auto !important;
+  background:linear-gradient(145deg,#fffdfd 0%,#fff8fb 100%) !important;
+  border:1px solid #ead0dc !important;
+  border-radius:30px !important;
+  padding:24px !important;
+  box-shadow:0 35px 110px #24151c38 !important;
+  position:relative;
+}
+.cartCard:before{
+  content:"";position:absolute;top:0;left:0;right:0;height:5px;
+  background:linear-gradient(90deg,#7d123c,#d85a86,#f5bfd2,#7d123c);
+  border-radius:30px 30px 0 0;
+}
+.cartHead{margin-bottom:18px !important;padding:5px 0 16px !important;border-bottom:1px solid #ecdbe3 !important}
+.cartHead h3{font-size:27px !important;color:#24151c !important;font-weight:900 !important}
+.cartHead h3:before{content:"🛒" !important;font-size:23px !important}
+.cartClose{
+  width:38px !important;height:38px !important;border-radius:12px !important;
+  background:#fff0f5 !important;color:#7d123c !important;
+  font-size:22px !important;font-weight:900 !important;
+  border:1px solid #f0d3df !important;
+}
+.cartClose:hover{background:#7d123c !important;color:#fff !important;transform:rotate(4deg)}
+.cartItem{
+  display:grid !important;grid-template-columns:1fr auto !important;align-items:center !important;
+  padding:15px 16px !important;margin-bottom:10px !important;
+  background:#fff !important;border:1px solid #ead9e1 !important;border-radius:18px !important;
+  box-shadow:0 7px 20px #7d123c0a !important;
+}
+.cartItem b{font-size:16px !important;color:#24151c !important}
+.cartItem small{font-size:13px !important;color:#806874 !important;line-height:1.6}
+.cartRemove{
+  border:0 !important;background:#fff0f4 !important;color:#a5144b !important;
+  border-radius:11px !important;padding:8px 12px !important;font-weight:900 !important;
+}
+.cartRemove:hover{background:#a5144b !important;color:#fff !important}
+.cartEmpty{
+  padding:34px 18px !important;border:1px dashed #dfb7c8 !important;
+  border-radius:18px !important;background:#fff !important;color:#806874 !important;
+  line-height:1.9 !important;
+}
+.cartTotal{
+  margin:16px 0 !important;padding:15px 16px !important;
+  background:#fff !important;border:1px solid #ead9e1 !important;border-radius:17px !important;
+  font-size:18px !important;
+}
+.cartTotal strong{color:#7d123c !important;font-size:22px !important}
+.cartForm{
+  margin-top:16px !important;padding:18px !important;
+  background:#fff !important;border:1px solid #ead9e1 !important;border-radius:20px !important;
+  box-shadow:0 8px 24px #7d123c08 !important;
+}
+.cartForm h4{margin:0 0 14px !important;color:#7d123c !important;font-size:20px !important}
+.cartGrid{gap:10px !important}
+.cartField{
+  border:1px solid #dcc7d1 !important;border-radius:13px !important;
+  padding:12px 13px !important;background:#fff !important;color:#24151c !important;
+  font-size:16px !important;min-height:48px;
+}
+.cartField::placeholder{color:#927f88 !important}
+.cartField:focus{border-color:#a5144b !important;box-shadow:0 0 0 4px #f6dce7 !important}
+.depositNote{
+  margin:14px 0 0 !important;padding:12px 14px !important;
+  background:#fff3f7 !important;border:1px solid #edd1dc !important;border-radius:14px !important;
+  color:#7d123c !important;font-size:13px !important;
+}
+.cartSend{
+  margin-top:14px !important;border-radius:15px !important;padding:14px 18px !important;
+  background:linear-gradient(135deg,#7d123c,#a5144b) !important;
+  box-shadow:0 12px 28px #7d123c30 !important;font-size:16px !important;
+}
+.cartSend:hover{transform:translateY(-2px) !important;box-shadow:0 16px 34px #7d123c3b !important}
+/* English readability boost — keep Arabic styling unchanged */
+html[dir="ltr"] .nav a{font-size:16px !important}
+html[dir="ltr"] .tag{font-size:14px !important}
+html[dir="ltr"] .lead{font-size:18px !important;line-height:2 !important}
+html[dir="ltr"] .btn{font-size:16px !important}
+html[dir="ltr"] .marq span{font-size:15px !important}
+html[dir="ltr"] .drop p{font-size:16px !important}
+html[dir="ltr"] .badge{font-size:13px !important}
+html[dir="ltr"] .caseText p{font-size:17px !important;line-height:2 !important}
+html[dir="ltr"] .choice small{font-size:12px !important}
+html[dir="ltr"] .notes span{font-size:12px !important}
+html[dir="ltr"] .inside p{font-size:16px !important;line-height:2 !important}
+html[dir="ltr"] .hint{font-size:14px !important}
+html[dir="ltr"] .details li{font-size:15px !important}
+html[dir="ltr"] .urgency p{font-size:16px !important}
+html[dir="ltr"] .footer{font-size:14px !important}
+html[dir="ltr"] .cartHead h3{font-size:31px !important}
+html[dir="ltr"] .cartBar b{font-size:16px !important}
+html[dir="ltr"] .cartItem b{font-size:18px !important}
+html[dir="ltr"] .cartItem small{font-size:15px !important;line-height:1.7 !important}
+html[dir="ltr"] .cartTotal{font-size:20px !important}
+html[dir="ltr"] .cartTotal strong{font-size:25px !important}
+html[dir="ltr"] .cartForm h4{font-size:22px !important}
+html[dir="ltr"] .cartField{font-size:17px !important}
+html[dir="ltr"] .depositNote{font-size:18px !important;line-height:1.8 !important;font-weight:900 !important;padding:15px 16px !important}
+html[dir="ltr"] .cartSend{font-size:18px !important;padding:16px 20px !important}
+
+@media(max-width:600px){
+  html[dir="ltr"] .lead{font-size:15px !important}
+  html[dir="ltr"] .drop p{font-size:14px !important}
+  html[dir="ltr"] .caseText p{font-size:14px !important}
+  html[dir="ltr"] .inside p{font-size:14px !important}
+  html[dir="ltr"] .urgency p{font-size:14px !important}
+  html[dir="ltr"] .cartHead h3{font-size:26px !important}
+  html[dir="ltr"] .cartItem b{font-size:16px !important}
+  html[dir="ltr"] .cartItem small{font-size:14px !important}
+  html[dir="ltr"] .depositNote{font-size:16px !important;line-height:1.75 !important}
+  html[dir="ltr"] .cartSend{font-size:16px !important}
+}
+
+html[dir="ltr"] .cartCard{direction:ltr;text-align:left}
+html[dir="ltr"] .cartItem{grid-template-columns:1fr auto !important}
+html[dir="ltr"] .cartGrid{direction:ltr}
+@media(max-width:600px){
+  .cartCard{padding:19px !important;border-radius:24px !important;max-height:91vh !important}
+  .cartHead h3{font-size:23px !important}
+  .cartBar{padding:8px 11px !important}
+  .cartBar b{font-size:13px !important}
+}
+
+
+/* ===== OCTOBER 2026 CASE OFFERS + OCT 1 STATIONERY LOCK ===== */
+.oldPrice{color:#a58a95;text-decoration:line-through;text-decoration-thickness:2px;font-size:.72em;font-weight:800;margin-inline-start:7px;opacity:.9}
+.choice .saveLine{display:block;font-size:11px;color:var(--red);font-weight:900;margin-top:3px}
+.caseOfferNote{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 8px}
+.caseOfferNote span{background:#fff0f5;border:1px solid #ead0d9;border-radius:999px;padding:7px 10px;font-size:12px;font-weight:900;color:var(--berry)}
+.customBox{margin-top:12px;padding:12px;border:1px solid #ead9e1;border-radius:15px;background:#fff8fb}.customBox.full{grid-column:1/-1}
+.customRow{display:flex;align-items:center;gap:9px;font-weight:900;margin-bottom:9px}.customRow input{accent-color:var(--berry);width:18px;height:18px}
+.customDesignSelect{width:100%;border:1px solid #dfccd5;border-radius:12px;padding:10px 12px;font:inherit;background:#fff;color:var(--ink)}
+.customDesignWrap{display:none}.customDesignWrap.show{display:block}.caseTotalHint{font-size:12px;color:var(--muted);margin-top:7px;font-weight:800}
+.stationeryLocked{position:relative;cursor:not-allowed}.stationeryLocked > *{filter:blur(9px);user-select:none;pointer-events:none}.shopLocked{position:relative}.shopLocked > *{filter:blur(9px);user-select:none;pointer-events:none}.shopLocked{cursor:not-allowed}
+.stationeryLocked:after{content:"متاح من 1 أكتوبر 🎀";position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:20px;background:#fff8f4b8;backdrop-filter:blur(2px);color:var(--berry);font-size:22px;font-weight:900;z-index:5;border-radius:30px}
+html[dir="ltr"] .stationeryLocked:after{content:"Available from October 1 🎀"}
+@media(max-width:700px){.choice .saveLine{font-size:9px}.caseOfferNote span{font-size:10px;padding:6px 8px}.stationeryLocked:after{font-size:18px}}
+</style>
+<style>
+
+/* ===== FINAL ENGLISH READABILITY + FRIENDLY VALIDATION MODAL ===== */
+html[dir="ltr"] body,
+html[dir="ltr"] p,
+html[dir="ltr"] li,
+html[dir="ltr"] label,
+html[dir="ltr"] small,
+html[dir="ltr"] .lead,
+html[dir="ltr"] .drop p,
+html[dir="ltr"] .head p,
+html[dir="ltr"] .caseText p,
+html[dir="ltr"] .inside p,
+html[dir="ltr"] .card p,
+html[dir="ltr"] .product p,
+html[dir="ltr"] .urgency p,
+html[dir="ltr"] .footer,
+html[dir="ltr"] .notes span,
+html[dir="ltr"] .choice small,
+html[dir="ltr"] .details li,
+html[dir="ltr"] .float,
+html[dir="ltr"] .tag,
+html[dir="ltr"] .marq span {
+  font-size: 18px !important;
+  line-height: 1.75 !important;
+}
+html[dir="ltr"] .nav a,
+html[dir="ltr"] .btn,
+html[dir="ltr"] button,
+html[dir="ltr"] .hint,
+html[dir="ltr"] .choice b,
+html[dir="ltr"] .order,
+html[dir="ltr"] .exitTrigger,
+html[dir="ltr"] .exitBtn {
+  font-size: 18px !important;
+}
+html[dir="ltr"] h1{font-size:clamp(44px,6vw,72px) !important}
+html[dir="ltr"] h2{font-size:clamp(34px,4.5vw,54px) !important}
+html[dir="ltr"] h3{font-size:clamp(28px,3.5vw,40px) !important}
+html[dir="ltr"] .caseText h3{font-size:clamp(46px,5vw,76px) !important}
+html[dir="ltr"] .card h3{font-size:31px !important}
+html[dir="ltr"] .badge strong{font-size:34px !important}
+html[dir="ltr"] .price{font-size:26px !important}
+html[dir="ltr"] .cartBar b{font-size:17px !important}
+html[dir="ltr"] .cartBar span{font-size:13px !important}
+html[dir="ltr"] .cartHead h3{font-size:32px !important}
+html[dir="ltr"] .cartItem b{font-size:19px !important}
+html[dir="ltr"] .cartItem small{font-size:17px !important;line-height:1.75 !important}
+html[dir="ltr"] .cartTotal{font-size:22px !important}
+html[dir="ltr"] .cartTotal strong{font-size:28px !important}
+html[dir="ltr"] .cartForm h4{font-size:24px !important}
+html[dir="ltr"] .cartField{font-size:18px !important;line-height:1.5 !important}
+html[dir="ltr"] .depositNote{
+  font-size:22px !important;
+  line-height:1.75 !important;
+  font-weight:900 !important;
+  padding:18px 18px !important;
+}
+html[dir="ltr"] .cartSend{font-size:20px !important;padding:17px 20px !important}
+
+.validationShade{
+  position:fixed;inset:0;z-index:9999;display:none;align-items:center;justify-content:center;
+  padding:18px;background:rgba(36,21,28,.46);backdrop-filter:blur(8px);
+}
+.validationShade.show{display:flex}
+.validationModal{
+  width:min(470px,100%);background:#fffdfd;border:1px solid #ead1dc;border-radius:24px;
+  box-shadow:0 30px 90px rgba(36,21,28,.28);padding:25px 24px 20px;
+  text-align:center;position:relative;animation:validationPop .18s ease-out;
+}
+@keyframes validationPop{from{opacity:0;transform:translateY(10px) scale(.97)}to{opacity:1;transform:none}}
+.validationModal:before{content:"🎀";display:block;font-size:30px;margin-bottom:7px}
+.validationModal h4{margin:0 0 9px;color:#7d123c;font-size:23px;font-weight:900}
+.validationModal p{margin:0 0 18px;color:#5f4b54;font-size:17px;line-height:1.7;font-weight:700}
+.validationModal button{
+  border:0;background:#7d123c;color:#fff;border-radius:14px;padding:11px 27px;
+  font-size:17px;font-weight:900;cursor:pointer;box-shadow:0 9px 22px rgba(125,18,60,.2)
+}
+.validationModal button:hover{transform:translateY(-1px);background:#a5144b}
+html[dir="ltr"] .validationModal h4{font-size:25px !important}
+html[dir="ltr"] .validationModal p{font-size:20px !important;line-height:1.7 !important}
+html[dir="ltr"] .validationModal button{font-size:19px !important}
+@media(max-width:600px){
+  html[dir="ltr"] body,html[dir="ltr"] p,html[dir="ltr"] li,html[dir="ltr"] label,html[dir="ltr"] small,
+  html[dir="ltr"] .lead,html[dir="ltr"] .drop p,html[dir="ltr"] .head p,html[dir="ltr"] .caseText p,
+  html[dir="ltr"] .inside p,html[dir="ltr"] .card p,html[dir="ltr"] .product p,html[dir="ltr"] .urgency p,
+  html[dir="ltr"] .footer{font-size:16px !important;line-height:1.75 !important}
+  html[dir="ltr"] .cartBar b{font-size:16px !important}
+  html[dir="ltr"] .cartHead h3{font-size:27px !important}
+  html[dir="ltr"] .cartItem b{font-size:17px !important}
+  html[dir="ltr"] .cartItem small{font-size:15px !important}
+  html[dir="ltr"] .cartField{font-size:17px !important}
+  html[dir="ltr"] .depositNote{font-size:19px !important;line-height:1.7 !important}
+  html[dir="ltr"] .cartSend{font-size:18px !important}
+  html[dir="ltr"] .validationModal p{font-size:18px !important}
+}
+
+</style>
+
+<style>
+/* ===== CLEAN ENGLISH TYPOGRAPHY ===== */
+/* English keeps the same visual scale as Arabic; no global font inflation. */
+html[dir="ltr"] body{font-size:16px}
+html[dir="ltr"] .nav a{font-size:14px}
+html[dir="ltr"] .tag{font-size:12px}
+html[dir="ltr"] .lead{font-size:16px;line-height:1.85}
+html[dir="ltr"] .drop p,
+html[dir="ltr"] .head p,
+html[dir="ltr"] .caseText p,
+html[dir="ltr"] .inside p,
+html[dir="ltr"] .card p,
+html[dir="ltr"] .product p,
+html[dir="ltr"] .urgency p,
+html[dir="ltr"] .footer{font-size:14px;line-height:1.8}
+html[dir="ltr"] .details li{font-size:13px}
+html[dir="ltr"] .notes span,
+html[dir="ltr"] .choice small,
+html[dir="ltr"] .float{font-size:10px}
+html[dir="ltr"] .btn,
+html[dir="ltr"] .order,
+html[dir="ltr"] .exitBtn{font-size:14px}
+html[dir="ltr"] .choice b{font-size:22px}
+html[dir="ltr"] .marq span{font-size:12px}
+html[dir="ltr"] h1{font-size:clamp(55px,8vw,105px)}
+html[dir="ltr"] h2{font-size:clamp(40px,6vw,72px)}
+html[dir="ltr"] h3{font-size:clamp(27px,4vw,44px)}
+html[dir="ltr"] .caseText h3{font-size:clamp(44px,5vw,76px)}
+html[dir="ltr"] .card h3{font-size:28px}
+html[dir="ltr"] .badge{font-size:11px}
+html[dir="ltr"] .badge strong{font-size:25px}
+html[dir="ltr"] .cartBar b{font-size:16px}
+html[dir="ltr"] .cartHead h3{font-size:27px}
+html[dir="ltr"] .cartItem b{font-size:17px}
+html[dir="ltr"] .cartItem small{font-size:15px}
+html[dir="ltr"] .cartTotal{font-size:18px}
+html[dir="ltr"] .cartTotal strong{font-size:25px}
+html[dir="ltr"] .cartForm h4{font-size:22px}
+html[dir="ltr"] .cartField,
+html[dir="ltr"] .cartField::placeholder{font-size:15px}
+html[dir="ltr"] .depositNote{font-size:16px;line-height:1.65;font-weight:700}
+html[dir="ltr"] .cartSend{font-size:16px}
+html[dir="ltr"] .validationModal h4{font-size:24px}
+html[dir="ltr"] .validationModal p{font-size:16px;line-height:1.65}
+html[dir="ltr"] .validationModal button{font-size:16px}
+html[dir="ltr"] .productAudioHint{font-size:13px}
+@media(max-width:600px){
+  html[dir="ltr"] body{font-size:14px}
+  html[dir="ltr"] p,html[dir="ltr"] li,html[dir="ltr"] label,html[dir="ltr"] small,html[dir="ltr"] .lead,html[dir="ltr"] .drop p,html[dir="ltr"] .head p,html[dir="ltr"] .caseText p,html[dir="ltr"] .inside p,html[dir="ltr"] .card p,html[dir="ltr"] .product p,html[dir="ltr"] .urgency p,html[dir="ltr"] .footer,html[dir="ltr"] .details li{font-size:13px;line-height:1.75}
+  html[dir="ltr"] .nav a,html[dir="ltr"] .tag,html[dir="ltr"] .btn,html[dir="ltr"] button,html[dir="ltr"] .hint,html[dir="ltr"] .order,html[dir="ltr"] .exitBtn{font-size:13px}
+  html[dir="ltr"] .cartBar b{font-size:14px}
+  html[dir="ltr"] .cartHead h3{font-size:24px}
+  html[dir="ltr"] .cartItem b{font-size:15px}
+  html[dir="ltr"] .cartItem small{font-size:13px}
+  html[dir="ltr"] .cartTotal{font-size:18px}
+  html[dir="ltr"] .cartTotal strong{font-size:24px}
+  html[dir="ltr"] .cartForm h4{font-size:20px}
+  html[dir="ltr"] .cartField,html[dir="ltr"] .cartField::placeholder{font-size:14px}
+  html[dir="ltr"] .depositNote{font-size:14px}
+  html[dir="ltr"] .cartSend{font-size:15px}
+  html[dir="ltr"] .validationModal p{font-size:14px}
+}
+</style>
+
+<style>
+/* ===== MOBILE IMAGE SIZE ONLY ===== */
+@media(max-width:700px){
+  .heroCase{
+    width:220px !important;
+    height:365px !important;
+  }
+
+  .caseImg{
+    width:220px !important;
+    height:365px !important;
+  }
+
+  .productImage{
+    width:82% !important;
+    height:190px !important;
+    margin:0 auto !important;
+    object-fit:cover !important;
+  }
+   .productImage{
+     transition:height .35s ease, width .35s ease !important;
+   }
+
+   .card.open .productImage{
+     width:100% !important;
+     height:305px !important;
+   }
+
+  .stickerImage{
+    max-width:82% !important;
+    max-height:205px !important;
+    width:auto !important;
+    height:auto !important;
+    margin:0 auto !important;
+    display:block !important;
+  }
+}
+/* ===== FINAL MOBILE PRODUCT IMAGE FIX ===== */
+@media(max-width:700px){
+  /* Give the product image area more room on phones */
+  .card .cover{
+    min-height:260px !important;
+    height:260px !important;
+    overflow:hidden !important;
+    padding:14px !important;
+    box-sizing:border-box !important;
+  }
+  .card.open .cover{
+    min-height:335px !important;
+    height:335px !important;
+    overflow:hidden !important;
+  }
+  .card .productImage{
+    width:88% !important;
+    height:225px !important;
+    max-width:100% !important;
+    max-height:100% !important;
+    margin:0 auto !important;
+    object-fit:contain !important;
+    display:block !important;
+    border-radius:18px !important;
+  }
+  .card.open .productImage{
+    width:100% !important;
+    height:305px !important;
+    max-width:100% !important;
+    max-height:100% !important;
+    object-fit:contain !important;
+    margin:0 auto !important;
+  }
+
+  /* Stickers: same visual size/space as the other product cards */
+  .stickerCover{
+    min-height:260px !important;
+    height:260px !important;
+    padding:14px !important;
+    box-sizing:border-box !important;
+    overflow:hidden !important;
+  }
+  .stickerCover .slider,
+  .stickerCover .slides,
+  .stickerCover .slide{
+    height:225px !important;
+    min-height:225px !important;
+  }
+  .stickerCover .slide{
+    padding:4px !important;
+    display:grid !important;
+    place-items:center !important;
+    box-sizing:border-box !important;
+  }
+  .stickerImage{
+    width:100% !important;
+    height:215px !important;
+    max-width:100% !important;
+    max-height:215px !important;
+    object-fit:contain !important;
+    display:block !important;
+    margin:auto !important;
+    border-radius:14px !important;
+  }
+}
+
+
+/* ================================================================
+   K.STORE — FINAL MOBILE HERO CONTROLS
+   ---------------------------------------------------------------
+   THIS BLOCK IS THE ONE TO EDIT when you want to resize/reposition
+   the hero items on phones.
+
+   Important:
+   - Arabic uses html[dir="rtl"]
+   - English uses html[dir="ltr"]
+   - Change ONLY the numbers you need.
+   - width / height = size
+   - top / right / bottom / left = position
+   - font-size = text size
+   - padding = space inside the white label
+   - transform rotate(...) = label angle
+   ================================================================ */
+
+@media (max-width: 800px){
+
+  /* ==============================================================
+     ARABIC MOBILE
+     ============================================================== */
+
+  html[dir="rtl"] .heroVisual{
+    /* HEIGHT OF THE WHOLE HERO IMAGE AREA */
+    height:410px !important;
+  }
+
+  html[dir="rtl"] .heroVisual .blob{
+    /* PINK SHAPE BEHIND THE PHONE
+       width / height = pink shape size
+    */
+    width:300px !important;
+    height:300px !important;
+  }
+
+  html[dir="rtl"] .heroVisual .heroCase{
+    /* MAIN PHONE CASE / MAIN IMAGE
+       width / height = phone image size
+       border-radius = rounded corners
+    */
+    width:250px !important;
+    height:350px !important;
+    border-radius:28px !important;
+  }
+
+  html[dir="rtl"] .heroVisual .heroSticker.s1{
+    /* 155 CASE CIRCLE
+       width / height = circle size
+       top / left = position
+       font-size = 155 text size
+    */
+    width:75px !important;
+    height:75px !important;
+    top:10px !important;
+    left:59px !important;
+    right:auto !important;
+    font-size:20px !important;
+  }
+
+  html[dir="rtl"] .heroVisual .heroSticker.s1 small{
+    /* CASE TEXT INSIDE THE CIRCLE */
+    font-size:20px !important;
+  }
+
+  html[dir="rtl"] .heroVisual .f1{
+    /* MOST WANTED LABEL
+       font-size = text size
+       padding = label size around the text
+       top / right = position
+       border-radius = roundness of label
+       transform rotate = angle
+    */
+    font-size:15px !important;
+    padding:8px 10px !important;
+    top:25px !important;
+    right:20px !important;
+    border-radius:15px !important;
+    transform:rotate(8deg) !important;
+  }
+
+  html[dir="rtl"] .heroVisual .f2{
+    /* UV • SILICONE LABEL
+       font-size = text size
+       padding = label size around the text
+       bottom / left = position
+       border-radius = roundness of label
+       transform rotate = angle
+    */
+    font-size:15px !important;
+    padding:8px 10px !important;
+    bottom:36px !important;
+    left:19px !important;
+    border-radius:15px !important;
+    transform:rotate(-8deg) !important;
+  }
+
+
+  /* ==============================================================
+     ENGLISH MOBILE
+     ============================================================== */
+
+  html[dir="ltr"] .heroVisual{
+    /* HEIGHT OF THE WHOLE HERO IMAGE AREA */
+    height:410px !important;
+  }
+
+  html[dir="ltr"] .heroVisual .blob{
+    /* PINK SHAPE BEHIND THE PHONE */
+    width:300px !important;
+    height:300px !important;
+  }
+
+  html[dir="ltr"] .heroVisual .heroCase{
+    /* MAIN PHONE CASE / MAIN IMAGE */
+    width:250px !important;
+    height:350px !important;
+    border-radius:26px !important;
+  }
+
+  html[dir="ltr"] .heroVisual .heroSticker.s1{
+    /* 155 CASE CIRCLE */
+    width:75px !important;
+    height:75px !important;
+    top:25px !important;
+    left:59px !important;
+    right:auto !important;
+    font-size:33px !important;
+  }
+
+  html[dir="ltr"] .heroVisual .heroSticker.s1 small{
+    /* CASE TEXT INSIDE THE CIRCLE */
+    font-size:18px !important;
+  }
+
+  html[dir="ltr"] .heroVisual .f1{
+    /* MOST WANTED LABEL */
+    font-size:17px !important;
+    padding:7px 9px !important;
+    top:35px !important;
+    right:4px !important;
+    border-radius:15px !important;
+    transform:rotate(8deg) !important;
+  }
+
+  html[dir="ltr"] .heroVisual .f2{
+    /* UV • SILICONE LABEL */
+    font-size:17px !important;
+    padding:7px 9px !important;
+    bottom:32px !important;
+    left:7px !important;
+    border-radius:15px !important;
+    transform:rotate(-8deg) !important;
+  }
+}
+
+
+/* ================================================================
+   VERY SMALL PHONES — max 380px
+   ---------------------------------------------------------------
+   If the design looks too big on small phones, edit this section.
+   ================================================================ */
+@media (max-width:380px){
+
+  html[dir="rtl"] .heroVisual .heroCase{
+    /* Arabic phone image size on very small screens */
+    width:185px !important;
+    height:275px !important;
+  }
+
+  html[dir="rtl"] .heroVisual .blob{
+    /* Arabic pink background size */
+    width:225px !important;
+    height:225px !important;
+  }
+
+  html[dir="rtl"] .heroVisual .f1,
+  html[dir="rtl"] .heroVisual .f2{
+    /* Arabic label text size + inside spacing */
+    font-size:8px !important;
+    padding:6px 8px !important;
+  }
+
+  html[dir="ltr"] .heroVisual .heroCase{
+    /* English phone image size on very small screens */
+    width:170px !important;
+    height:255px !important;
+  }
+
+  html[dir="ltr"] .heroVisual .blob{
+    /* English pink background size */
+    width:205px !important;
+    height:205px !important;
+  }
+
+  html[dir="ltr"] .heroVisual .f1,
+  html[dir="ltr"] .heroVisual .f2{
+    /* English label text size + inside spacing */
+    font-size:7px !important;
+    padding:6px 7px !important;
+  }
+}
+
+/* ================================================================
+   K.STORE — EASY MOBILE CONTROLS
+   ================================================================
+   كل الأرقام هنا هي أرقام تحكم فقط.
+   غيّر الرقم الموجود بعد التعليق حسب الحجم الذي تريده.
+   هذا البلوك في آخر CSS لذلك هو المتحكم النهائي في الموبايل.
+
+   أهم القواعد:
+   - font-size  = حجم الكلام
+   - padding    = حجم الزر/البادج من الداخل
+   - width/height = الحجم الصريح للعنصر
+   - gap        = المسافة بين العناصر
+   - top/right/left/bottom = تحريك العنصر
+   - border-radius = تدوير الحواف
+   ================================================================ */
+
+@media (max-width:800px){
+
+  /* ==============================================================
+     1) NAVBAR — الشريط العلوي كله
+     ==============================================================
+     لو عايز الشريط العلوي أطول/أقصر: غيّر padding هنا.
+  */
+  .topin{
+    padding: 13px 14px !important; /* ارتفاع ومسافات الـNavbar من الداخل */
+    gap: 8px !important;            /* المسافة بين اللوجو وCart وEN وOctober */
+  }
+
+  /* ==============================================================
+     2) K.Store LOGO — اللوجو
+     ==============================================================
+  */
+  .topin .logo{
+    font-size: 20px !important; /* حجم K.Store */
+    line-height: 1 !important;
+  }
+
+  .topin .logo::first-letter{
+    /* لا تحتاج لتعديله — فقط للحفاظ على شكل اللوجو */
+  }
+
+  /* ==============================================================
+     3) CART — زر السلة الموجود في الـNavbar
+     ==============================================================
+     padding = حجم الزر نفسه
+     b font-size = حجم كلمة السلة
+     span = دائرة عدد المنتجات
+  */
+  .topin .cartBar{
+    padding: 8px 11px !important; /* حجم زر السلة */
+    min-height: 40px !important;   /* ارتفاع الزر */
+    gap: 5px !important;           /* المسافة بين الرقم والكلمة والأيقونة */
+    border-radius: 18px !important;/* تدوير الزر */
+  }
+
+  .topin .cartBar b{
+    font-size: 13px !important; /* حجم كلمة السلة */
+  }
+
+  .topin .cartBar span#cartCount{
+    min-width: 21px !important; /* عرض دائرة الرقم */
+    height: 21px !important;    /* ارتفاع دائرة الرقم */
+    font-size: 11px !important; /* حجم رقم 0 */
+    padding: 0 5px !important;
+  }
+
+  .topin .cartBar .cartIcon{
+    font-size: 16px !important; /* حجم أيقونة 🛒 */
+    line-height: 1 !important;
+  }
+
+  /* ==============================================================
+     4) EN / AR — زر تغيير اللغة
+     ==============================================================
+     width / min-width = عرض الزر
+     height = ارتفاع الزر
+     font-size = حجم EN / AR
+     padding = المسافة داخل الزر
+  */
+  .topin #langToggle{
+    min-width: 72px !important; /* عرض زر اللغة */
+    height: 42px !important;    /* ارتفاع زر اللغة */
+    padding: 0 14px !important; /* مساحة داخل الزر */
+    font-size: 14px !important;  /* حجم EN / AR */
+    border-radius: 14px !important; /* تدوير الحواف */
+    gap: 7px !important;        /* المسافة بين 文 و EN/AR */
+  }
+
+  .topin #langToggle .langIcon{
+    font-size: 17px !important; /* حجم أيقونة 文 */
+  }
+
+  /* ==============================================================
+     5) OCTOBER DROP — الزر الموجود أقصى اليسار/اليمين
+     ==============================================================
+     ده الـ .tag الموجود داخل الـNavbar فقط.
+  */
+  .topin > .tag{
+    font-size: 13px !important;  /* حجم OCTOBER DROP */
+    padding: 9px 12px !important;/* حجم الزر من الداخل */
+    border-radius: 99px !important;
+    white-space: nowrap !important;
+  }
+
+  /* ==============================================================
+     6) OFFER PILLS — البادجات الموجودة تحت الـNavbar
+     مثل:
+     "موتوريلا ايتيل معظم انفينكس 160ج بدل 165ج"
+     "كاستم +10 بدل +20"
+     ==============================================================
+     لو عايز تكبر/تصغر هذه البادجات، عدّل الثلاثة أرقام هنا.
+  */
+  .caseOfferNote{
+    gap: 8px !important;       /* المسافة بين البادجين */
+    margin: 14px 0 8px !important;
+  }
+
+  .caseOfferNote span{
+    font-size: 10px !important; /* حجم الكلام داخل البادج */
+    padding: 7px 10px !important; /* حجم البادج نفسه */
+    border-radius: 999px !important; /* تدوير البادج */
+    line-height: 1.35 !important;
+  }
+
+  /* ==============================================================
+     7) HERO CASE — صورة الجراب الكبيرة التي أرسلتها قبل ذلك
+     ==============================================================
+  */
+  .heroVisual{
+    height: 410px !important; /* مساحة منطقة الجراب كلها */
+  }
+
+  .heroVisual .heroCase{
+    width: 205px !important;  /* عرض صورة الجراب */
+    height: 305px !important; /* ارتفاع صورة الجراب */
+  }
+
+  /* الخلفية الوردية خلف الجراب */
+  .heroVisual .blob{
+    width: 245px !important;  /* عرض الخلفية الوردية */
+    height: 245px !important; /* ارتفاع الخلفية الوردية */
+  }
+
+  /* دائرة 155 CASE */
+  .heroVisual .heroSticker.s1{
+    width: 58px !important;   /* عرض الدائرة */
+    height: 58px !important;  /* ارتفاع الدائرة */
+    font-size: 11px !important; /* حجم 155 */
+    top: 20px !important;     /* تحريك لأعلى/أسفل */
+    left: 0 !important;       /* تحريك يمين/شمال */
+  }
+
+  .heroVisual .heroSticker.s1 small{
+    font-size: 6px !important; /* حجم كلمة CASE */
+  }
+
+  /* MOST WANTED */
+  .heroVisual .f1{
+    font-size: 9px !important;    /* حجم الكلام */
+    padding: 8px 10px !important; /* حجم المستطيل */
+    top: 38px !important;         /* تحريك لأعلى/أسفل */
+    right: 2px !important;        /* تحريك يمين/شمال */
+    border-radius: 15px !important;
+  }
+
+  /* UV • SILICONE */
+  .heroVisual .f2{
+    font-size: 9px !important;    /* حجم الكلام */
+    padding: 8px 10px !important; /* حجم المستطيل */
+    bottom: 36px !important;      /* تحريك لأعلى/أسفل */
+    left: 2px !important;         /* تحريك يمين/شمال */
+    border-radius: 15px !important;
+  }
+}
+
+/* ================================================================
+   ENGLISH — نفس عناصر الموبايل لكن يمكن التحكم فيها منفصلة
+   ================================================================ */
+@media (max-width:800px){
+
+  html[dir="ltr"] .topin .logo{
+    font-size: 20px !important; /* حجم K.Store بالإنجليزي */
+  }
+
+  html[dir="ltr"] .topin .cartBar{
+    padding: 8px 11px !important; /* حجم Cart بالإنجليزي */
+  }
+
+  html[dir="ltr"] .topin .cartBar b{
+    font-size: 13px !important; /* حجم كلمة Cart */
+  }
+
+  html[dir="ltr"] .topin #langToggle{
+    min-width: 72px !important; /* عرض EN/AR */
+    height: 42px !important;    /* ارتفاع EN/AR */
+    font-size: 14px !important; /* حجم EN/AR */
+  }
+
+  html[dir="ltr"] .topin > .tag{
+    font-size: 13px !important;  /* حجم OCTOBER DROP */
+    padding: 9px 12px !important;
+  }
+
+  /* Offer pills بالإنجليزي */
+  html[dir="ltr"] .caseOfferNote span{
+    font-size: 10px !important;  /* حجم الكلام */
+    padding: 7px 10px !important; /* حجم البادج */
+  }
+
+  /* Hero بالإنجليزي */
+  html[dir="ltr"] .heroVisual .heroCase{
+    width: 250px !important;  /* عرض الجراب */
+    height: 350px !important; /* ارتفاع الجراب */
+  }
+
+  html[dir="ltr"] .heroVisual .blob{
+    width: 320px !important;
+    height: 320px !important;
+  }
+
+  html[dir="ltr"] .heroVisual .heroSticker.s1{
+    width: 75px !important;
+    height: 75px !important;
+    font-size: 33px !important;
+    top: 25px !important;
+    left: 59px !important;
+  }
+
+  html[dir="ltr"] .heroVisual .heroSticker.s1 small{
+    font-size: 18px !important;
+  }
+
+  html[dir="ltr"] .heroVisual .f1{
+    font-size: 17px !important;
+    padding: 7px 9px !important;
+    top: 35px !important;
+    right:4 !important;
+  }
+
+  html[dir="ltr"] .heroVisual .f2{
+    font-size: 18px !important;
+    padding: 7px 9px !important;
+    bottom: 32px !important;
+    left: 6px !important;
+  }
+}
+
+/* ================================================================
+   VERY SMALL PHONES — أقل من 380px
+   لو حسيت إن التصميم صغير/كبير على موبايل صغير جدًا عدّل هنا.
+   ================================================================ */
+@media (max-width:380px){
+
+  .topin{
+    padding: 10px 8px !important; /* مساحة الـNavbar */
+    gap: 5px !important;          /* المسافة بين عناصر الـNavbar */
+  }
+
+  .topin .logo{
+    font-size: 17px !important; /* حجم اللوجو */
+  }
+
+  .topin .cartBar{
+    padding: 6px 8px !important; /* حجم Cart */
+  }
+
+  .topin .cartBar b{
+    font-size: 11px !important; /* كلمة السلة */
+  }
+
+  .topin #langToggle{
+    min-width: 60px !important; /* عرض EN/AR */
+    height: 37px !important;    /* ارتفاع EN/AR */
+    padding: 0 9px !important;
+    font-size: 12px !important;
+  }
+
+  .topin > .tag{
+    font-size: 10px !important; /* OCTOBER DROP */
+    padding: 7px 8px !important;
+  }
+
+
+  .heroVisual .heroCase{
+    width: 185px !important;
+    height: 275px !important;
+  }
+
+  .heroVisual .blob{
+    width: 225px !important;
+    height: 225px !important;
+  }
+}/* ===== FINAL OFFER NOTE SIZE ===== */
+
+.caseOfferNote{
+  display:flex !important;
+  flex-wrap:wrap !important;
+  justify-content:center !important;
+  gap:8px !important;
+}
+
+.caseOfferNote span{
+  font-size:16px !important;
+  padding:9px 14px !important;
+  line-height:1.4 !important;
+  border-radius:999px !important;
+  white-space:normal !important;
+}
+
+/* English */
+html[dir="ltr"] .caseOfferNote span{
+  font-size:16px !important;
+  padding:9px 14px !important;
+}
+
+/* Mobile */
+@media(max-width:700px){
+  .caseOfferNote span{
+    font-size:15px !important;
+    padding:9px 13px !important;
+  }
+
+  html[dir="ltr"] .caseOfferNote span{
+    font-size:15px !important;
+    padding:9px 13px !important;
+  }
+}
+
+</style>
+
+</head>
+<body>
+<div id="validationShade" class="validationShade" aria-hidden="true">
+  <div class="validationModal" role="alertdialog" aria-modal="true" aria-labelledby="validationTitle">
+    <h4 id="validationTitle">Missing details</h4>
+    <p id="validationMessage">Please fill in all required case details 🎀</p>
+    <button type="button" id="validationOk">OK</button>
+  </div>
+</div>
+<div class="bow b1">🎀</div><div class="bow b2">♡</div>
+<header class="top"><div class="topin"><a class="logo">K.<i>Store</i> 🎀</a><nav class="nav"><a href="#cases">الجرابات</a><a href="#shop">المنتجات</a><a href="#drop">October Drop</a></nav><button class="cartBar" id="cartBar" onclick="openCart()" aria-label="فتح سلة الطلبات"><span id="cartCount">0</span><b id="cartLabel">السلة</b> <span class="cartIcon">🛒</span></button><button id="langToggle" class="langToggle" type="button" aria-label="Switch language">EN</button><span class="tag">OCTOBER DROP ✦</span></div></header>
+
+<section class="hero"><div class="heroIn">
+<div class="reveal"><div class="eyebrow">K.STORE — OCTOBER 2026 • V10</div><h1>مش كل<br><em>خصم</em> بيتكرر.</h1><p class="lead">أسعار أكتوبر نزلت 🎀 <b>والفكرة إن العروض دي مش هنرجعها بنفس الشكل تاني.</b> شوفي اللي عجبك واضغطي عليه عشان تعرفي السعر وتطلبي فورًا.</p><div class="actions"><a class="btn primary" href="#drop">أشوف العروض ↓</a><a class="btn secondary" href="#cases">الجرابات 🎀</a></div></div>
+<div class="heroVisual reveal"><div class="blob"></div><div class="heroSticker s1">155<br><small>CASE</small></div><div class="float f1">MOST WANTED ♡</div><div class="float f2">UV • SILICONE</div><img class="heroCase" src="assets/case-black-floral.png" alt="K.Store UV silicone phone case"></div>
+</div></section>
+
+<div class="marquee"><div class="marq"><div class="marqGroup"><span>OCTOBER PRICES ✦</span><span>مش هنكررها ✦</span><span>UV SILICONE CASES ✦</span><span>STICKERS 🎀</span><span>NOTEBOOKS ✦</span><span>OCTOBER PRICES ✦</span><span>مش هنكررها ✦</span></div><div class="marqGroup" aria-hidden="true"><span>OCTOBER PRICES ✦</span><span>مش هنكررها ✦</span><span>UV SILICONE CASES ✦</span><span>STICKERS 🎀</span><span>NOTEBOOKS ✦</span><span>OCTOBER PRICES ✦</span><span>مش هنكررها ✦</span></div></div></div>
+
+<section class="wrap drop" id="drop"><div class="dropbox"><div><div class="tiny">THE OCTOBER DROP</div><h2>العروض متاحة لمدة 3 أيام فقط.</h2><p>من غير countdown وهمي ومن غير “آخر قطعة”. الخصومات دي فعلًا خاصة بالـ October Drop، وبعد انتهاء الـ3 أيام مش هنكررها بنفس الشكل.</p></div><div class="badge">LIMITED PRICING<strong>OCTOBER</strong>🎀</div></div></section>
+
+<section class="wrap content" id="cases"><div class="head reveal"><div><div class="tiny">THE MAIN CHARACTER</div><h2>جرابات <span class="inlineScript">تتحب. 🎀</span></h2></div><p>اختاري الجراب اللي عجبك وشوفي السعر والاختيارات وتفاصيل الطلب 💗</p></div>
+<div class="caseBox reveal"><div class="casePhoto"><img class="caseImg" src="assets/case-black-floral.png" alt="Black floral UV printed silicone phone case"></div><div class="caseText"><span class="tag">UV PRINT • SILICONE</span><h3>Black Floral<br>Case ♡</h3><p>جراب Black Floral بتصميم وردي كيوت 🌸 اختاري عدد الجرابات اللي يناسبك، والأسعار الجديدة عليها توفير واضح. الطلبات من 25 إلى 27 أكتوبر.</p><div class="choices"><button class="choice active" data-case="جراب واحد — 155 EGP (بدل 160)"><small>ONE CASE</small><b>155ج <span class="oldPrice">160ج</span></b></button><button class="choice" data-case="جرابين — 259 EGP (بدل 320)"><small>TWO CASES</small><b>259ج <span class="oldPrice">320ج</span></b></button><button class="choice" data-case="3 جرابات — 370 EGP (بدل 480)"><small>THREE CASES</small><b>370ج <span class="oldPrice">480ج</span></b></button><button class="choice" data-case="4 جرابات — 499 EGP (بدل 640)"><small>FOUR CASES</small><b>499ج <span class="oldPrice">640ج</span></b></button></div><div class="caseOfferNote"><span>Motorola, itel, and most Infinix models 160 EGP instead of 165 EGP</span><span>كاستم +10 بدل +20</span></div><div class="notes"><span>طباعه uv سيليكون</span><span>الطلبات هتبدا 25–27 أكتوبر • الوصول خلال 2–3 أسابيع</span></div><button class="btn primary" style="width:100%" onclick="addCaseToCart()">أضيفي الجراب للسلة 🛒</button></div></div></section>
+
+<section class="wrap content shopLocked" id="shop"><div class="head reveal"><div><div class="tiny">TAP TO OPEN</div><h2>اختاري اللي يعجبك<br>وخلي الباقي علينا ♡</h2></div><p>اختاري أي حاجة عجباكي واضغطي عليها عشان تشوفي <b>السعر والاختيارات وطريقة الطلب</b> 💗</p></div>
+<div class="catalog">
+
+<article class="card reveal stationeryLocked" onclick="toggle(this)"><div class="cover"><img class="productImage" src="assets/notebook.jpg" alt="K.Store notebook" style="width:100%;height:305px;object-fit:cover;border-radius:18px"></div><div class="inside"><h3>Notebooks 📖</h3><p>نوت بوك لطيف ومناسب للمذاكرة والكتابة اليومية 📖 اختاري عدد الصفحات اللي يناسبك وشوفي السعر بعد الضغط.</p><span class="hint">اضغطي عشان تفتحي الأسعار ↓</span><div class="details"><ul><li><span>50 pages</span><b>59 EGP</b></li><li><span>100 pages</span><b>100 EGP</b></li><li><span>200 pages</span><b>155 EGP</b></li><li><span>300 pages</span><b>225 EGP</b></li></ul><div class="selectRow"><select id="notebook"><option>50 pages — 59 EGP</option><option>100 pages — 100 EGP</option><option>200 pages — 155 EGP</option><option>300 pages — 225 EGP</option></select><button class="order" onclick="event.stopPropagation();send('Notebook',notebook.value)">أضيفي للسلة 🛒</button></div></div></div></article>
+
+<article class="card reveal" onclick="toggle(this)"><div class="cover"><img class="productImage" src="assets/pouch.jpg" alt="K.Store pouch" style="width:100%;height:305px;object-fit:cover;border-radius:18px"></div><div class="inside"><h3>Pouches 👜</h3><p>Pouch عملي وكيوت 👜 اختاري الحجم المناسب ليكي من Small وMedium وLarge وشوفي السعر قبل الطلب.</p><span class="hint">اضغطي عشان تفتحي الأسعار ↓</span><div class="details"><ul><li><span>Small</span><b>122 EGP</b></li><li><span>Medium</span><b>155 EGP</b></li><li><span>Large</span><b>189 EGP</b></li></ul><div class="selectRow"><select id="pouch"><option>Small — 122 EGP</option><option>Medium — 155 EGP</option><option>Large — 189 EGP</option></select><button class="order" onclick="event.stopPropagation();send('Pouch',pouch.value)">أضيفي للسلة 🛒</button></div></div></div></article>
+
+<article class="card reveal stationeryLocked" onclick="toggle(this)"><div class="stickerCover"><div class="slider" id="stickerSlider"><div class="slides">
+<div class="slide"><img class="stickerImage" src="assets/sticker-book.jpg" alt="K.Store sticker book"></div>
+<div class="slide"><img class="stickerImage" src="assets/sticker-sheet.jpg" alt="K.Store sticker sheet"></div>
+<div class="slide"><img class="stickerImage" src="assets/premium-sticker.jpg" alt="K.Store premium single sticker"></div>
+</div></div><div class="dots"><button class="dot active" onclick="event.stopPropagation();slideTo(0)"></button><button class="dot" onclick="event.stopPropagation();slideTo(1)"></button><button class="dot" onclick="event.stopPropagation();slideTo(2)"></button></div></div>
+<div class="inside"><h3>Stickers 🎀</h3><p>اختاري الاستيكرز اللي على ذوقك 🎀 عندك Sticker Book أو Sticker Sheet أو Premium Single Sticker.</p><span class="hint">اضغطي عشان تفتحي الأسعار ↓</span><div class="details"><ul><li><span>Sticker Sheet</span><b>10 EGP</b></li><li><span>Premium Single Sticker</span><b>19 EGP</b></li><li><span>Sticker Book</span><b>125 EGP</b></li></ul><div class="selectRow"><select id="sticker"><option>Sticker Sheet — 10 EGP</option><option>Premium Single Sticker — 19 EGP</option><option>Sticker Book — 125 EGP</option></select><button class="order" onclick="event.stopPropagation();addSelectedToCart('Sticker',sticker.value)">أضيفي للسلة 🛒</button></div></div></div></article>
+
+<article class="card reveal" onclick="toggle(this)"><div class="cover"><img class="productImage" src="assets/bubble-gun.jpg" alt="K.Store bubble gun" style="width:100%;height:305px;object-fit:cover;border-radius:18px"></div><div class="inside"><h3>Bubble Guns 🫧</h3><p>اختاري الـBubble Gun اللي عجبك 🫧 فيه أكتر من شكل وحجم، وكل الاختيارات والأسعار هتظهر بعد الضغط.</p><span class="hint">اضغطي عشان تفتحي الأسعار ↓</span><div class="details"><ul><li><span>Mini Duck / Mouse</span><b>139 EGP</b></li><li><span>Large Pink / Blue</span><b>149 EGP</b></li><li><span>Premium Pink / Blue</span><b>210 EGP</b></li><li><span>Electric Pro Pink / Blue</span><b>320 EGP</b></li></ul><div class="selectRow"><select id="bubble"><option>Mini Duck — 139 EGP</option><option>Mini Mouse — 139 EGP</option><option>Large Pink — 149 EGP</option><option>Large Blue — 149 EGP</option><option>Premium Pink — 210 EGP</option><option>Premium Blue — 210 EGP</option><option>Electric Pro Pink — 320 EGP</option><option>Electric Pro Blue — 320 EGP</option></select><button class="order" onclick="event.stopPropagation();addSelectedToCart('Bubble Gun',bubble.value)">أضيفي للسلة 🛒</button></div></div></div></article>
+
+<article class="card reveal" onclick="toggle(this)"><div class="cover"><img class="productImage" src="assets/squishy.jpg" alt="K.Store squishy" style="width:100%;height:305px;object-fit:cover;border-radius:18px"></div><div class="inside"><h3>Squishies 🧸</h3><p>Squishies كيوت وطرية 🧸 اختاري الشكل اللي عجبك من الاختيارات المتاحة وشوفي السعر.</p><span class="hint">اضغطي عشان تفتحي الأسعار ↓</span><div class="details"><ul><li><span>Heart</span><b>79 EGP</b></li><li><span>Onion</span><b>85 EGP</b></li><li><span>Dispenser</span><b>69 EGP</b></li></ul><div class="selectRow"><select id="squishy"><option>Heart — 79 EGP</option><option>Onion — 85 EGP</option><option>Dispenser — 69 EGP</option></select><button class="order" onclick="event.stopPropagation();addSelectedToCart('Squishy',squishy.value)">أضيفي للسلة 🛒</button></div></div></div></article>
+
+<article class="card reveal stationeryLocked" onclick="toggle(this)"><div class="cover"><img class="productImage" src="assets/coloring-book.jpg" alt="K.Store coloring book"></div><div class="inside"><h3>Coloring Book 🎨</h3><p>Coloring Book فيه 20 صورة 🎨 وسعره الخاص بأكتوبر ظاهر عند فتح المنتج.</p><span class="hint">اضغطي عشان تفتحي السعر ↓</span><div class="details"><ul><li><span>20 pictures</span><b>59 EGP</b></li></ul><button class="order" style="width:100%;margin-top:12px" onclick="event.stopPropagation();addToCart('Coloring Book','20 pictures — 59 EGP')">أضيفي للسلة 🛒</button></div></div></article>
+
+</div></section>
+
+<div class="exitTriggerWrap"><button class="exitTrigger" onclick="showExit()">مغادرة الموقع 🚪</button></div>
+<section class="urgency"><div class="reveal"><div class="tiny" style="color:#ffdce9">ONE OCTOBER DROP</div><h2>مش كل خصم<br>بيستنى.</h2><p>أسعار أكتوبر معمولة للـDrop ده. لو في حاجة عاجباكي، اختاريها دلوقتي لأننا مش هنرجع نفس الأسعار بنفس الشكل بعد انتهاء الـ3 أيام.</p><button class="btn" style="background:#fff;color:var(--berry);margin-top:22px" onclick="openCart()">افتحي السلة 🛒</button></div></section>
+<footer class="footer"><div><b>K.Store 🎀</b><br>cute things, cases & little happiness.</div><div><a href="https://linktr.ee/K.store188" target="_blank">Linktree</a></div></footer>
+
+
+<div class="cartShade" id="cartShade" aria-hidden="true">
+  <div class="cartCard" role="dialog" aria-modal="true" aria-labelledby="cartTitle">
+    <div class="cartHead"><h3 id="cartTitle">سلة طلباتك 🎀</h3><button class="cartClose" onclick="closeCart()" aria-label="إغلاق">×</button></div>
+    <div id="cartItems"></div>
+    <div class="cartTotal"><span>الإجمالي</span><strong id="cartTotal">0 EGP</strong></div>
+    <div class="cartForm" id="caseForm" style="display:none">
+      <h4>بيانات الجراب 🎀</h4>
+      <div class="cartGrid">
+        <input class="cartField" id="caseType" placeholder="نوع الجراب / الموبايل" required>
+        <input class="cartField" id="caseName" placeholder="الاسم" required>
+        <input class="cartField full" id="caseAddress" placeholder="العنوان" required>
+        <input class="cartField" id="caseGovernorate" placeholder="المحافظة" required>
+        <input class="cartField" id="casePhone1" placeholder="الرقم الأول" inputmode="tel" required>
+        <input class="cartField" id="casePhone2" placeholder="الرقم الثاني (اختياري)" inputmode="tel">
+        <div class="customBox full">
+          <label class="customRow"><input type="checkbox" id="customCase" onchange="toggleCustomDesign()"> <span id="customLabel">تصميم كاستم؟ (+10 جنيه)</span></label>
+          <div class="customDesignWrap" id="customDesignWrap"><select class="customDesignSelect" id="customDesign" onchange="renderCart()"><option value="">اختاري نوع التصميم</option><option value="Pink">صورتك | Your Photo
+          </option><option value="Purple">صورة شخص | Someone’s Photo
+          </option><option value="Anime">صورة حيوانك | Pet Photo
+          </option><option value="Animals">اسمك | Your Name
+          </option><option value="Other">تصميمك | Your Design</option></select></div>
+          <div class="caseTotalHint" id="customHint">لو اخترتي Custom بيتضاف 10 جنيه على الإجمالي.</div>
+        </div>
+      </div>
+    </div>
+    <div class="depositNote">أي أوردر لأي حاجة موجودة على الموقع بيتدفع له ديبوزت قبل تأكيد الأوردر.</div>
+    <button class="btn primary cartSend" onclick="sendCartToWhatsApp()">إرسال الأوردر على WhatsApp 💌</button>
+  </div>
+</div>
+
+<div class="exitShade" id="exitShade" aria-hidden="true">
+  <div class="exitCard" id="exitCard" role="dialog" aria-modal="true">
+    <button class="exitClose" id="exitClose" aria-label="إغلاق">×</button>
+    <div class="exitEyebrow">WAIT WAIT WAIT 🎀</div>
+    <div class="exitTitle">إنتِ <em>بجد</em><br>هتمشي؟ 😭</div>
+    <p class="exitText" id="exitText">
+      العروض دي مش عاجباكي ولا إيه؟ 👁️👄👁️<br>
+      بصّي على الأسعار الأول وبعدين احكمي علينا 😭🎀
+    </p>
+    <div class="exitPrice">جرابين بـ 259 جنيه بدل 320 🎀</div>
+    <div class="exitActions">
+      <button class="exitBtn stayBtn" id="stayBtn">لا لا أنا جاية أطلب 😭🎀</button>
+      <button class="exitBtn leaveBtn" id="leaveBtn">لا أنا ماشية 🚪</button>
+    </div>
+    <div class="exitMeme" id="exitMeme"></div>
+    <div class="exitTiny">اختاري براحتك طبعًا... بس إحنا كنا مستنيينك هنا 😭🎀</div>
+  </div>
+</div>
+
+<script>
+const WA="201096056450";
+function wa(text){location.href="https://wa.me/"+WA+"?text="+encodeURIComponent(text)}
+/* ===== CART PERSISTENCE ===== */
+const CART_STORAGE_KEY = "KStoreCart";
+let cart = [];
+try {
+  const savedCart = localStorage.getItem(CART_STORAGE_KEY);
+  if(savedCart){
+    const parsedCart = JSON.parse(savedCart);
+    if(Array.isArray(parsedCart)) cart = parsedCart;
+  }
+}catch(e){
+  cart = [];
+}
+function saveCart(){
+  try{ localStorage.setItem(CART_STORAGE_KEY, JSON.stringify(cart)); }catch(e){}
+}
+function priceFromChoice(choice){const m=String(choice).match(/(\d+)\s*EGP/);return m?Number(m[1]):0}
+function addToCart(product,choice){cart.push({product,choice,price:priceFromChoice(choice),isCase:false});saveCart();renderCart();openCart()}
+function addSelectedToCart(product,selectValue){addToCart(product,selectValue)}
+let caseChoice="جراب واحد — 155 EGP (بدل 160)";
+document.querySelectorAll(".choice").forEach(x=>x.onclick=e=>{e.stopPropagation();document.querySelectorAll(".choice").forEach(y=>y.classList.remove("active"));x.classList.add("active");caseChoice=x.dataset.case});
+function toggleCustomDesign(){const checked=!!document.getElementById("customCase")?.checked;document.getElementById("customDesignWrap")?.classList.toggle("show",checked);renderCart()}
+function caseCartTotal(){return cart.reduce((sum,x)=>sum+x.price,0)}
+function addCaseToCart(){const base=priceFromChoice(caseChoice);cart.push({product:"Black Floral Case",choice:caseChoice,isCase:true,basePrice:base,custom:false,customDesign:"",price:base});saveCart();renderCart();openCart()}
+function cartText(ar,en){return window.KStoreEnglish ? en : ar}
+function translateCartChoice(value){
+  if(!window.KStoreEnglish) return value;
+  let v=String(value);
+  const pairs=[
+    ["جراب واحد — 155 EGP (بدل 160)","One case — 155 EGP (instead of 160)"],
+    ["جرابين — 259 EGP (بدل 320)","Two cases — 259 EGP (instead of 320)"],
+    ["3 جرابات — 370 EGP (بدل 480)","3 cases — 370 EGP (instead of 480)"],
+    ["4 جرابات — 499 EGP (بدل 640)","4 cases — 499 EGP (instead of 640)"],
+    ["جراب واحد","One case"],
+    ["جرابين","Two cases"],
+    ["لو مطلوب","if needed"],
+    ["مطلوب","if needed"],
+    ["بعض Infinix","some Infinix"],
+    ["الطلبات 25–27 أكتوبر • الوصول خلال 2–3 أسابيع","Orders Oct 25–27 • Delivery in 2–3 weeks"],["الطلبات 25–27 أكتوبر","Orders Oct 25–27"],["الوصول خلال 2–3 أسابيع","Delivery in 2–3 weeks"],
+    ["UV على Silicone","UV on Silicone"],
+    ["الجنيه","EGP"]
+  ];
+  for(const [ar,en] of pairs) v=v.split(ar).join(en);
+  return v;
+}
+function renderCart(){
+  const items=document.getElementById("cartItems"), count=document.getElementById("cartCount"), totalEl=document.getElementById("cartTotal"), caseForm=document.getElementById("caseForm");
+  const english=!!window.KStoreEnglish;
+  count.textContent=cart.length;
+  const label=document.getElementById("cartLabel");
+  if(label) label.textContent=english ? "Cart" : "السلة";
+  document.getElementById("cartTitle").textContent=english ? "Your Cart" : "سلة طلباتك";
+  document.querySelector(".cartTotal span").textContent=english ? "Total" : "الإجمالي";
+  document.querySelector(".cartForm h4").textContent=english ? "Case Details 🎀" : "بيانات الجراب 🎀";
+  document.querySelector(".depositNote").textContent=english ? "A deposit is required before any order is confirmed." : "أي أوردر لأي حاجة موجودة على الموقع بيتدفع له ديبوزت قبل تأكيد الأوردر.";
+  document.querySelector(".cartSend").textContent=english ? "Send order on WhatsApp 💌" : "إرسال الأوردر على WhatsApp 💌";
+  const placeholders=english ? ["Phone case / mobile model","Name","Address","Governorate","First phone number","Second phone number (optional)"] : ["نوع الجراب / الموبايل","الاسم","العنوان","المحافظة","الرقم الأول","الرقم الثاني (اختياري)"];
+  ["caseType","caseName","caseAddress","caseGovernorate","casePhone1","casePhone2"].forEach((id,i)=>{const el=document.getElementById(id);if(el)el.placeholder=placeholders[i]});
+  const customLabel=document.getElementById("customLabel");if(customLabel)customLabel.textContent=english?"Custom design? (+10 EGP)":"تصميم كاستم؟ (+10 جنيه)";
+  const customHint=document.getElementById("customHint");if(customHint)customHint.textContent=english?"Choosing Custom adds 10 EGP to the total.":"لو اخترتي Custom بيتضاف 10 جنيه على الإجمالي.";
+  const customSelect=document.getElementById("customDesign");if(customSelect)customSelect.options[0].text=english?"Choose a design type":"اختاري نوع التصميم";
+  if(!cart.length){items.innerHTML=`<div class="cartEmpty">${english?"Your cart is empty right now 🎀<br>Pick something you love and add it to your cart.":"السلة فاضية دلوقتي 🎀<br>اختاري اللي يعجبك وضيفيه للسلة."}</div>`;totalEl.textContent="0 EGP";caseForm.style.display="none";return}
+  const hasCase=cart.some(x=>x.isCase);const custom=!!document.getElementById("customCase")?.checked;const design=document.getElementById("customDesign")?.value||"";
+  cart.filter(x=>x.isCase).forEach(x=>{x.custom=custom;x.customDesign=design;x.price=x.basePrice+(custom?10:0)});
+  items.innerHTML=cart.map((x,i)=>{let detail=translateCartChoice(x.choice);if(x.isCase&&x.custom){detail+=(english?" | Custom +10 EGP":" | Custom +10 جنيه")+(x.customDesign?(english?" | Design: ":" | التصميم: ")+x.customDesign:"");}return `<div class="cartItem"><div><b>${x.product}</b><small>${detail}</small></div><button class="cartRemove" onclick="removeFromCart(${i})">${english?"Remove":"حذف"}</button></div>`}).join("");
+  totalEl.textContent=caseCartTotal()+" EGP";
+  caseForm.style.display=hasCase?"block":"none";
+}
+function removeFromCart(i){cart.splice(i,1);saveCart();renderCart()}
+document.addEventListener("DOMContentLoaded",()=>renderCart());
+function openCart(){document.getElementById("cartShade").classList.add("show");document.getElementById("cartShade").setAttribute("aria-hidden","false");renderCart()}
+function closeCart(){document.getElementById("cartShade").classList.remove("show");document.getElementById("cartShade").setAttribute("aria-hidden","true")}
+function sendCartToWhatsApp(){
+  if(!cart.length){openCart();return}
+  const hasCase=cart.some(x=>x.isCase);
+  const custom=!!document.getElementById("customCase")?.checked;
+  const design=document.getElementById("customDesign")?.value||"";
+  cart.filter(x=>x.isCase).forEach(x=>{x.custom=custom;x.customDesign=design;x.price=x.basePrice+(custom?10:0)});
+  if(hasCase){
+    const vals={type:document.getElementById("caseType").value.trim(),name:document.getElementById("caseName").value.trim(),address:document.getElementById("caseAddress").value.trim(),gov:document.getElementById("caseGovernorate").value.trim(),phone1:document.getElementById("casePhone1").value.trim(),phone2:document.getElementById("casePhone2").value.trim()};
+    if(!vals.type||!vals.name||!vals.address||!vals.gov||!vals.phone1||(custom&&!design)){openValidationMessage();return}
+    const lines=cart.map((x,i)=>`${i+1}. ${x.product} — ${window.KStoreEnglish?translateCartChoice(x.choice):x.choice}${x.isCase&&x.custom?(window.KStoreEnglish?" | Custom +10 EGP":" | Custom +10 جنيه")+(x.customDesign?(window.KStoreEnglish?" | Design: "+x.customDesign:" | التصميم: "+x.customDesign):""):""}`).join("\n");
+    let msg=window.KStoreEnglish?"Hello K.Store 🎀\nI would like to order:\n"+lines+"\nTotal: "+caseCartTotal()+" EGP\n\nA deposit is required before any order is confirmed.":"Hello K.Store 🎀\nعايزة أطلب الأوردر ده:\n"+lines+"\nالإجمالي: "+caseCartTotal()+" EGP\n\nأي أوردر لأي حاجة موجودة على الموقع عليه ديبوزت قبل التأكيد.";
+    msg+=window.KStoreEnglish?"\n\nCase Details 🎀\nPhone case / mobile model: "+vals.type+"\nName: "+vals.name+"\nAddress: "+vals.address+"\nGovernorate: "+vals.gov+"\nFirst phone number: "+vals.phone1+"\nSecond phone number: "+(vals.phone2||"Not provided"):"\n\nبيانات الجراب 🎀\nنوع الجراب / الموبايل: "+vals.type+"\nالاسم: "+vals.name+"\nالعنوان: "+vals.address+"\nالمحافظة: "+vals.gov+"\nالرقم الأول: "+vals.phone1+"\nالرقم الثاني: "+(vals.phone2||"غير مضاف");
+    if(custom)msg+=window.KStoreEnglish?"\nCustom design: "+design:"\nتصميم الكاستم: "+design;
+    try{if(typeof KAudio!=="undefined")KAudio.play("success",.9)}catch(e){}
+    wa(msg);return;
+  }
+  const lines=cart.map((x,i)=>`${i+1}. ${x.product} — ${window.KStoreEnglish?translateCartChoice(x.choice):x.choice}`).join("\n");
+  const msg=window.KStoreEnglish?"Hello K.Store 🎀\nI would like to order:\n"+lines+"\nTotal: "+caseCartTotal()+" EGP\n\nA deposit is required before any order is confirmed.":"Hello K.Store 🎀\nعايزة أطلب الأوردر ده:\n"+lines+"\nالإجمالي: "+caseCartTotal()+" EGP\n\nأي أوردر لأي حاجة موجودة على الموقع عليه ديبوزت قبل التأكيد.";
+  wa(msg);
+}
+function openValidationMessage(){
+  const shade=document.getElementById("validationShade");
+  const title=document.getElementById("validationTitle");
+  const message=document.getElementById("validationMessage");
+  const ok=document.getElementById("validationOk");
+  const english=!!window.KStoreEnglish;
+  title.textContent=english ? "Almost there! 🎀" : "لسه خطوة صغيرة 🎀";
+  message.textContent=english ? "Please fill in all required case details before sending your order." : "من فضلك اكتبي كل بيانات الجراب المطلوبة قبل إرسال الأوردر.";
+  ok.textContent=english ? "Got it" : "تمام";
+  shade.classList.add("show");
+  shade.setAttribute("aria-hidden","false");
+  ok.focus();
+}
+function closeValidationMessage(){
+  const shade=document.getElementById("validationShade");
+  shade.classList.remove("show");
+  shade.setAttribute("aria-hidden","true");
+}
+
+// Validation dialog controls: close with OK, outside click, or Escape.
+document.getElementById("validationOk")?.addEventListener("click", closeValidationMessage);
+document.getElementById("validationShade")?.addEventListener("click", e=>{
+  if(e.target.id === "validationShade") closeValidationMessage();
+});
+document.addEventListener("keydown", e=>{
+  if(e.key === "Escape" && document.getElementById("validationShade")?.classList.contains("show")){
+    closeValidationMessage();
+  }
+});
+function send(product,choice){addToCart(product,choice)}
+
+function toggle(card){
+  const wasOpen = card.classList.contains("open");
+  card.classList.toggle("open");
+  // Price/details appear inside the card exactly as in V9.
+  if(!wasOpen && typeof KAudio !== "undefined") KAudio.play("product", .68);
+}
+
+let current=0;
+function slideTo(n){current=n;document.querySelector(".slides").style.transform="translateX("+(-100*n)+"%)";document.querySelectorAll(".dot").forEach((d,i)=>d.classList.toggle("active",i===n))}
+let sx=0;
+document.getElementById("stickerSlider").addEventListener("touchstart",e=>sx=e.touches[0].clientX,{passive:true});
+document.getElementById("stickerSlider").addEventListener("touchend",e=>{let dx=e.changedTouches[0].clientX-sx;if(Math.abs(dx)>45)slideTo(dx<0?Math.min(2,current+1):Math.max(0,current-1))},{passive:true});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add("show")}),{threshold:.12});document.querySelectorAll(".reveal").forEach(x=>io.observe(x));
+
+/* ===== V7 exit meme interaction ===== */
+let exitShown = false;
+let leaveAttempts = 0;
+const exitShade = document.getElementById("exitShade");
+const exitText = document.getElementById("exitText");
+const exitMeme = document.getElementById("exitMeme");
+const leaveBtn = document.getElementById("leaveBtn");
+const stayBtn = document.getElementById("stayBtn");
+const exitClose = document.getElementById("exitClose");
+
+function showExit(){
+  if(exitShown) return;
+  leaveAttempts=0;
+  exitShown=true;
+  exitShade.classList.add("show");
+  exitShade.setAttribute("aria-hidden","false");
+}
+function hideExit(){
+  exitShade.classList.remove("show");
+  exitShade.setAttribute("aria-hidden","true");
+}
+/* Desktop: leaving toward the browser chrome. Mobile: intercept browser back once. */
+let mobileExitArmed=false;
+if(!("ontouchstart" in window) && window.innerWidth>700){
+  document.addEventListener("mouseleave",e=>{ if(e.clientY<=3) showExit(); });
+}
+function armMobileExit(){
+  if(mobileExitArmed) return;
+  mobileExitArmed=true;
+  try{ history.pushState({kstoreExit:true},"",location.href); }catch(e){}
+}
+function onMobileBack(){
+  if(exitShown) return;
+  showExit();
+  try{ history.pushState({kstoreExit:true},"",location.href); }catch(e){}
+}
+if(("ontouchstart" in window) || window.innerWidth<=700){
+  armMobileExit();
+  window.addEventListener("popstate", onMobileBack);
+}
+stayBtn.addEventListener("click",()=>{
+  exitMeme.textContent=window.KStoreEnglish ? "Now that’s what I’m talking about 😭🎀" : "أهو كده الكلام 😭🎀";
+  stayBtn.textContent=window.KStoreEnglish ? "Let’s pick something 🎀" : "يلااا نختار 🎀";
+  setTimeout(()=>{hideExit();document.querySelector("#shop").scrollIntoView({behavior:"smooth"});},420);
+});
+leaveBtn.addEventListener("click",()=>{
+  leaveAttempts++;
+  leaveBtn.classList.remove("dodging");
+  void leaveBtn.offsetWidth;
+  leaveBtn.classList.add("dodging");
+  if(leaveAttempts===1){
+    exitMeme.textContent=window.KStoreEnglish ? "Come on 😭" : "حرام عليكي 😭";
+    exitText.innerHTML=window.KStoreEnglish ? "Just look at the prices first 😭🎀<br>I promise I won’t kidnap you." : "طب بصي بس على الأسعار الأول 😭🎀<br>مش هخطفك والله.";
+  }else if(leaveAttempts===2){
+    exitMeme.textContent=window.KStoreEnglish ? "You are really leaving? 👁️👄👁️" : "إنتِ مصممة بجد؟ 👁️👄👁️";
+    exitText.innerHTML=window.KStoreEnglish ? "Two cases for 259 EGP instead of 320 and you are pretending not to see it? 😭" : "جرابين بـ 259 جنيه بدل 320 وإنتِ عاملة نفسك مش شايفة؟ 😭";
+  }else if(leaveAttempts===3){
+    exitMeme.textContent=window.KStoreEnglish ? "Okay okay, your choice 😭" : "خلاص خلاص براحتك 😭";
+    exitText.innerHTML=window.KStoreEnglish ? "Just don’t come back later saying: <b>“That offer was so good!”</b> 🎀" : "بس متجيش تقوليلي بعدين: <b>ياااه العرض كان حلو</b> 🎀";
+    setTimeout(hideExit,850);
+  }else{
+    hideExit();
+  }
+});
+exitClose.addEventListener("click",hideExit);
+exitShade.addEventListener("click",e=>{if(e.target===exitShade)hideExit()});
+document.addEventListener("keydown",e=>{if(e.key==="Escape")hideExit()});
+
+
+
+/* ===== K.Store V12 AUDIO =====
+   Put the MP3 files listed in assets/sfx/ into this folder.
+   The code uses these exact filenames.
+*/
+const KSTORE_AUDIO = {
+  welcome: "assets/sfx/welcome.mp3",
+  promo: "assets/sfx/promo-applause.mp3",
+  product: "assets/sfx/product-wow.mp3",
+  excitement: "assets/sfx/excitement.mp3",
+  stay: "assets/sfx/stay-happy.mp3",
+  leave1: "assets/sfx/leave-shock.mp3",
+  leave2: "assets/sfx/leave-nooo.mp3",
+  leave3: "assets/sfx/leave-sad.mp3",
+  success: "assets/sfx/thank-you.mp3"
+};
+
+const KAudio = {
+  cache: {},
+  play(key, volume=0.72){
+    const src = KSTORE_AUDIO[key];
+    if(!src) return;
+    try{
+      let a = this.cache[key];
+      if(!a){
+        a = new Audio(src);
+        a.preload = "auto";
+        this.cache[key] = a;
+      }
+      a.currentTime = 0;
+      a.volume = volume;
+      const p = a.play();
+      if(p && p.catch) p.catch(()=>{});
+    }catch(e){}
+  }
+};
+
+// Browsers generally require the first audio to happen after user interaction.
+// The first meaningful interaction unlocks the audio controller.
+let audioUnlocked = false;
+document.addEventListener("pointerdown", ()=>{
+  if(audioUnlocked) return;
+  audioUnlocked = true;
+  // Don't play automatically here; just unlock future audio.
+}, {once:true, passive:true});
+
+// Stationery is blurred until October 1, 2026.
+(function(){const unlockAt=new Date("2026-10-01T00:00:00+03:00");if(new Date()>=unlockAt)document.querySelectorAll(".stationeryLocked").forEach(el=>el.classList.remove("stationeryLocked"));})();
+
+// Product cards: every card opening gets a tiny cute reaction.
+document.querySelectorAll(".card").forEach(card=>{
+  card.addEventListener("click", e=>{
+    // Don't retrigger for controls inside an already-open card.
+    if(e.target.closest("button,select,a")) return;
+    if(!card.classList.contains("open")){
+      KAudio.play("product", .68);
+    }
+  });
+});
+
+// October Drop / promo CTA.
+document.querySelectorAll('a[href="#drop"]').forEach(btn=>{
+  btn.addEventListener("click", ()=>KAudio.play("promo", .70));
+});
+
+// Case order / success buttons.
+document.querySelectorAll('button[onclick="orderCase()"]').forEach(btn=>{
+  btn.addEventListener("click", ()=>KAudio.play("success", .70));
+});
+
+// Exit interaction.
+const _originalShowExit = showExit;
+showExit = function(){
+  _originalShowExit();
+  KAudio.play("leave1", .76);
+};
+
+stayBtn.addEventListener("click", ()=>{
+  KAudio.play("stay", .78);
+});
+
+let _lastLeaveAudio = 0;
+leaveBtn.addEventListener("click", ()=>{
+  const now = leaveAttempts + 1;
+  if(now===1) KAudio.play("leave1", .76);
+  else if(now===2) KAudio.play("leave2", .76);
+  else if(now===3) KAudio.play("leave3", .76);
+});
+
+// Play welcome only after the visitor's first interaction, avoiding browser autoplay blocking.
+let welcomePlayed = false;
+function playWelcomeOnce(){
+  if(welcomePlayed) return;
+  welcomePlayed = true;
+  KAudio.play("welcome", .72);
+}
+document.addEventListener("click", playWelcomeOnce, {once:true});
+
+</script>
+
+
+
+
+
+
+
+
+
+
+<script>
+/* ===== K.Store V11: reliable Arabic / English switch ===== */
+window.KStoreEnglish = false;
+const KSTORE_PAIRS = [
+  ["155ج","155 EGP"],["160ج","160 EGP"],["259ج","259 EGP"],["320ج","320 EGP"],["370ج","370 EGP"],["480ج","480 EGP"],["499ج","499 EGP"],["640ج","640 EGP"],
+  ["كاستم +10 بدل +20","Custom +10 instead of +20"],["طباعه uv سيليكون","UV printing on silicone"],
+  ["الطلبات هتبدا 25–27 أكتوبر • الوصول خلال 2–3 أسابيع","Orders open October 25–27 • Delivery in 2–3 weeks"],
+["أضيفي الجراب للسلة 🛒", "Add this case to cart 🛒"], ["افتحي السلة 🛒", "Open Cart 🛒"], ["أضيفي الجراب للسلة", "Add this case to cart"], ["افتحي السلة", "Open Cart"], ["من غير countdown وهمي ومن غير “آخر قطعة”. الخصومات دي فعلًا خاصة بالـ October Drop، وبعد انتهاء الـ3 أيام مش هنكررها بنفس الشكل.", "No fake countdowns and no “last one” tricks. These offers are special for the October Drop and won't return in the same way after the 3 days."], ["جراب Black Floral بتصميم وردي كيوت 🌸 اختاري عدد الجرابات اللي يناسبك، والأسعار الجديدة عليها توفير واضح. الطلبات من 25 إلى 27 أكتوبر.", "Black Floral case with a cute pink design 🌸 Choose the number of cases you want, with the new prices showing clear savings. Orders are open October 25–27."], ["نوت بوك لطيف ومناسب للمذاكرة والكتابة اليومية 📖 اختاري عدد الصفحات اللي يناسبك وشوفي السعر بعد الضغط.", "Cute notebooks for studying and everyday writing 📖 Choose the page count you want and see the price after tapping."], ["اختاري الـBubble Gun اللي عجبك 🫧 فيه أكتر من شكل وحجم، وكل الاختيارات والأسعار هتظهر بعد الضغط.", "Pick your favorite Bubble Gun 🫧 There are different shapes and sizes; all options and prices appear when you tap."], ["اختاري الاستيكرز اللي على ذوقك 🎀 عندك Sticker Book أو Sticker Sheet أو Premium Single Sticker.", "Pick the stickers you love 🎀 Choose a Sticker Book, Sticker Sheet, or Premium Single Sticker."], ["Pouch عملي وكيوت 👜 اختاري الحجم المناسب ليكي من Small وMedium وLarge وشوفي السعر قبل الطلب.", "Cute and practical pouch 👜 Choose Small, Medium, or Large and see the price before ordering."], ["Squishies كيوت وطرية 🧸 اختاري الشكل اللي عجبك من الاختيارات المتاحة وشوفي السعر.", "Cute, soft Squishies 🧸 Choose your favorite available shape and see the price."], ["Coloring Book فيه 20 صورة 🎨 وسعره الخاص بأكتوبر ظاهر عند فتح المنتج.", "Coloring Book with 20 pictures 🎨 Its special October price appears when you open the product."], ["اختاري الجراب اللي عجبك وشوفي السعر والاختيارات وتفاصيل الطلب 💗", "Pick your favorite case and see the price, options, and order details 💗"], ["شوفي اللي عجبك واضغطي عليه عشان تعرفي السعر وتطلبي فورًا.", "Pick what you love, tap to see the price, and order right away."], ["اختاري براحتك طبعًا... بس إحنا كنا مستنيينك هنا 😭🎀", "Of course, choose whatever you like... we were just waiting for you here 😭🎀"], ["والفكرة إن العروض دي مش هنرجعها بنفس الشكل تاني.", "These offers won't come back in the same way."], ["اختاري أي حاجة عجباكي واضغطي عليها عشان تشوفي ", "Pick anything you like and tap it to see "], ["بصّي على الأسعار الأول وبعدين احكمي علينا 😭🎀", "Look at the prices first, then judge us 😭🎀"], ["اختاري اللي يعجبك<br>وخلي الباقي علينا ♡", "Pick what you love<br>and leave the rest to us ♡"], ["اختاري اللي يعجبك", "Pick what you love"], ["وخلي الباقي علينا ♡", "and leave the rest to us ♡"], ["أسعار أكتوبر معمولة للـDrop ده. لو في حاجة عاجباكي، اختاريها دلوقتي لأننا مش هنرجع نفس الأسعار بنفس الشكل بعد انتهاء الـ3 أيام.", "October prices are made for this Drop. If you see something you love, choose it now because these same prices will not return after the 3 days."], ["الطلب يوم 25/9 • الوصول خلال 2–3 أسابيع", "Order on Sep 25 • Delivery in 2–3 weeks"], ["العروض دي مش عاجباكي ولا إيه؟ 👁️👄👁️", "You don't like these offers or what? 👁️👄👁️"], ["السعر والاختيارات وطريقة الطلب", "the price, options, and how to order"], ["العروض متاحة لمدة 3 أيام فقط.", "Available for 3 days only."], ["اطلبي الجراب على WhatsApp 💌", "Order your case on WhatsApp 💌"], ["اضغطي عشان تفتحي الأسعار ↓", "Tap to see the prices ↓"], ["اضغطي عشان تفتحي السعر ↓", "Tap to see the price ↓"], ["لا لا أنا جاية أطلب 😭🎀", "No no, I'm staying to order 😭🎀"], ["أسعار أكتوبر نزلت 🎀 ", "October prices are here 🎀 "], ["اطلبي على WhatsApp 💌", "Order on WhatsApp 💌"], ["جراب واحد — 155 EGP", "One case — 155 EGP"], ["جرابين — 259 EGP", "Two cases — 259 EGP"], ["UV على Silicone", "UV on Silicone"], ["مغادرة الموقع 🚪", "Leave the site 🚪"], ["لا أنا ماشية 🚪", "No, I'm leaving 🚪"], ["Custom +10 EGP", "Custom +10 EGP"], ["أشوف العروض ↓", "See the offers ↓"], ["مش هنكررها ✦", "We won't repeat them ✦"], ["بعض Infinix", "some Infinix"], ["الجرابات 🎀", "Cases 🎀"], ["العروض دي", "These offers"], ["TWO CASES", "TWO CASES"], ["الجرابات", "Cases"], ["المنتجات", "Products"], ["ONE CASE", "ONE CASE"], ["بيتكرر.", "comes back."], ["تتحب. 🎀", "you'll love. 🎀"], ["جرابات", "Cases"], ["مش كل", "Not every"], ["اطلب", "Order"], ["خصم", "discount"], ["بيستنى.", "waits."], ["على", "on"], ["السلة", "Cart"], ["سلة طلباتك 🎀", "Your Cart 🎀"], ["الإجمالي", "Total"], ["بيانات الجراب 🎀", "Case Details 🎀"], ["نوع الجراب / الموبايل", "Phone case / mobile model"], ["الاسم", "Name"], ["العنوان", "Address"], ["المحافظة", "Governorate"], ["الرقم الأول", "First phone number"], ["الرقم الثاني (اختياري)", "Second phone number (optional)"], ["حذف", "Remove"], ["السلة فاضية دلوقتي 🎀", "Your cart is empty right now 🎀"], ["اختاري اللي يعجبك وضيفيه للسلة.", "Pick something you love and add it to your cart."], ["إرسال الأوردر على WhatsApp 💌", "Send order on WhatsApp 💌"], ["أي أوردر لأي حاجة موجودة على الموقع بيتدفع له ديبوزت قبل تأكيد الأوردر.", "A deposit is required before any order is confirmed."], ["أضيفي للسلة 🛒", "Add to cart 🛒"], ["افتحي السلة 🛒", "Open cart 🛒"], ["إغلاق", "Close"], ["مغادرة الموقع 🚪", "Leave the site 🚪"], ["جرابين بـ 259 جنيه بدل 320 🎀", "Two cases for 259 EGP instead of 320 🎀"], ["إنتِ", "Are you"], ["بجد", "really"], ["هتمشي؟ 😭", "leaving? 😭"], ["اختاري براحتك طبعًا... بس إحنا كنا مستنيينك هنا 😭🎀", "Of course, choose whatever you like... we were just waiting for you here 😭🎀"], ["توفير 5 جنيه","Save 5 EGP"], ["توفير 61 جنيه","Save 61 EGP"], ["توفير 110 جنيه","Save 110 EGP"], ["توفير 141 جنيه","Save 141 EGP"], ["الموديلات الخاصة: 160 بدل 165 EGP","Special models: 160 EGP instead of 165 EGP"], ["Custom +10 بدل +20 EGP","Custom +10 instead of +20 EGP"], ["تصميم كاستم؟ (+10 جنيه)","Custom design? (+10 EGP)"], ["اختاري نوع التصميم","Choose a design type"], ["لو اخترتي Custom بيتضاف 10 جنيه على الإجمالي.","Choosing Custom adds 10 EGP to the total."], ["متاح من 1 أكتوبر 🎀","Available from October 1 🎀"], ["Pink / بينك","Pink"], ["Purple / موف","Purple"], ["Anime / أنمي","Anime"], ["Animals / حيوانات","Animals"], ["Other / حاجة تانية","Other"]];
+(function(){
+  const btn=document.getElementById("langToggle");
+  if(!btn) return;
+  /* ===== LANGUAGE PERSISTENCE ===== */
+  const KSTORE_LANGUAGE_KEY = "KStoreLanguage";
+  let isEnglish = localStorage.getItem(KSTORE_LANGUAGE_KEY) === "en";
+  const originalNodes=new Map();
+  window.KStoreEnglish=isEnglish;
+
+  function translateNode(node){
+    if(node.nodeType===Node.TEXT_NODE){
+      if(!originalNodes.has(node)) originalNodes.set(node,node.nodeValue);
+      let v=originalNodes.get(node);
+      for(const [ar,en] of KSTORE_PAIRS) v=v.split(ar).join(en);
+      node.nodeValue=v;
+      return;
+    }
+    if(node.nodeType===Node.ELEMENT_NODE && node.id!=="langToggle"){
+      Array.from(node.childNodes).forEach(translateNode);
+    }
+  }
+
+  function translateAttributes(){
+    document.querySelectorAll("[data-case]").forEach(el=>{
+      if(!el.dataset.arCase) el.dataset.arCase=el.getAttribute("data-case");
+      let v=el.dataset.arCase;
+      for(const [ar,en] of KSTORE_PAIRS) v=v.split(ar).join(en);
+      el.setAttribute("data-case", isEnglish ? v : el.dataset.arCase);
+    });
+    const attrs=["placeholder","aria-label","title"];
+    document.querySelectorAll(attrs.map(a=>`[${a}]`).join(",")).forEach(el=>{
+      attrs.forEach(a=>{
+        if(!el.hasAttribute(a)) return;
+        const key="ar"+a.replace(/[^a-z]/gi,"").replace(/^./,c=>c.toUpperCase());
+        if(!el.dataset[key]) el.dataset[key]=el.getAttribute(a);
+        let v=el.dataset[key];
+        for(const [ar,en] of [...KSTORE_PAIRS].sort((a,b)=>b[0].length-a[0].length)) v=v.split(ar).join(en);
+        el.setAttribute(a,isEnglish ? v : el.dataset[key]);
+      });
+    });
+  }
+
+  function restoreArabic(){
+    originalNodes.forEach((value,node)=>{
+      if(node.isConnected) node.nodeValue=value;
+    });
+    document.querySelectorAll("[data-case]").forEach(el=>{
+      if(el.dataset.arCase) el.setAttribute("data-case",el.dataset.arCase);
+    });
+  }
+
+  /* ===== APPLY SAVED LANGUAGE ON PAGE LOAD / REFRESH ===== */
+  if(isEnglish){
+    translateNode(document.body);
+    translateAttributes();
+    document.documentElement.lang="en";
+    document.documentElement.dir="ltr";
+    document.documentElement.classList.add("isEnglish");
+    btn.innerHTML="<span class=\"langIcon\">文</span><span>AR</span>";
+  }else{
+    document.documentElement.lang="ar";
+    document.documentElement.dir="rtl";
+    document.documentElement.classList.remove("isEnglish");
+    btn.innerHTML="<span class=\"langIcon\">文</span><span>EN</span>";
+  }
+
+  btn.addEventListener("click",()=>{
+    isEnglish=!isEnglish;
+    window.KStoreEnglish=isEnglish;
+
+    /* Save the selected language so Refresh keeps the same language. */
+    localStorage.setItem(
+      KSTORE_LANGUAGE_KEY,
+      isEnglish ? "en" : "ar"
+    );
+
+    if(isEnglish){
+      translateNode(document.body);
+      translateAttributes();
+      if(typeof renderCart === "function") renderCart();
+      document.documentElement.lang="en";
+      document.documentElement.dir="ltr";
+      document.documentElement.classList.add("isEnglish");
+      btn.innerHTML="<span class=\"langIcon\">文</span><span>AR</span>";
+    }else{
+      restoreArabic();
+      if(typeof renderCart === "function") renderCart();
+      document.documentElement.lang="ar";
+      document.documentElement.dir="rtl";
+      document.documentElement.classList.remove("isEnglish");
+      btn.innerHTML="<span class=\"langIcon\">文</span><span>EN</span>";
+    }
+  });
+})();
+</script>
+
+</body>
+</html>
